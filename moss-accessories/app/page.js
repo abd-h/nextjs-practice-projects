@@ -1,11 +1,10 @@
+import MainHeader from "@/components/header/header";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <header>
-      <h1>Main header</h1>
-      </header>
+     <MainHeader />
       <main>
       Main part goes hear!
       </main>
