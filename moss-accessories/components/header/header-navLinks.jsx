@@ -7,8 +7,9 @@ import profileIcon from "@/assets/profile-icon-2.png";
 import basketIcon from "@/assets/basket-icon.png";
 
 export default function NavLinks() {
+    
   return (
-    <nav className="mt-2 p-6 w-full h-8 overflow-hidden justify-between flex items-center">
+    <nav className=" bg-white mt-2 p-6 w-full h-8 overflow-hidden justify-between flex items-center">
       <ul>
         <li>
           <Link href="/">

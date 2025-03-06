@@ -1,5 +1,5 @@
 import MainHeader from "@/components/header/header";
-import HeroBanner from "@/components/main/hero-banner";
+import ProductLandingPage from "@/components/main/product_landing_page";
 import { getAccessories } from "@/lib/products";
 import Image from "next/image";
 
@@ -9,9 +9,9 @@ export default async function Home() {
   
   return (
     <>
-     <MainHeader />
-      <main>
-      <HeroBanner />
+      <MainHeader />
+      <main className="max-w-[98%] m-auto">
+        <ProductLandingPage />
       </main>
     </>
   );

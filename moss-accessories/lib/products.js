@@ -7,3 +7,4 @@ export const getAccessories = () => {
 
   return db.prepare("SELECT * FROM products").all();
 };
+
