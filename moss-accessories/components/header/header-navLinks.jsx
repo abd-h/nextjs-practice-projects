@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,9 +10,27 @@ import profileIcon from "@/assets/profile-icon-2.png";
 import basketIcon from "@/assets/basket-icon.png";
 
 export default function NavLinks() {
+  const [ sticky, setSticky ] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 5) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  };
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    console.log(sticky);
     
   return (
-    <nav className=" bg-white mt-2 p-6 w-full h-8 overflow-hidden justify-between flex items-center">
+    <nav
+      className={`${sticky ? 'py-8 top-[-8px] fixed bg-white transition-all' : ''} bg-white mt-2 p-6 w-full h-8 overflow-hidden justify-between flex items-center`}
+    >
       <ul>
         <li>
           <Link href="/">
