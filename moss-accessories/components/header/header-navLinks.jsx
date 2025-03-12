@@ -8,9 +8,19 @@ import wishList from "@/assets/wish-list.png";
 import searchIcon from "@/assets/search-icon.png";
 import profileIcon from "@/assets/profile-icon-2.png";
 import basketIcon from "@/assets/basket-icon.png";
+import CanvasPanel from "./canvas-panel";
 
 export default function NavLinks() {
-  const [ sticky, setSticky ] = useState(false);
+  const [sticky, setSticky] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false)
+  }
 
   const handleScroll = () => {
     if (window.scrollY > 5) {
@@ -25,11 +35,14 @@ export default function NavLinks() {
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    console.log(sticky);
+  console.log(window.scrollY);
+  
     
   return (
     <nav
-      className={`${sticky ? 'py-8 top-[-8px] fixed bg-white transition-all' : ''} bg-white mt-2 p-6 w-full h-8 overflow-hidden justify-between flex items-center`}
+      className={`${
+        sticky ? "py-8 top-[-8px] fixed bg-white transition-all" : ""
+      } bg-white mt-2 p-6 w-full h-8 overflow-hidden justify-between flex items-center`}
     >
       <ul>
         <li>
@@ -43,33 +56,54 @@ export default function NavLinks() {
           </Link>
         </li>
       </ul>
-      <ul className="flex justify-evenly w-[60%] self-center items-center ">
-        <li>
-          <Link href="new in">New in</Link>
+      <ul className="flex justify-evenly w-[60%] self-center items-center relative ">
+        <li
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className="relative"
+        >
+          
+          <CanvasPanel />
         </li>
         <li>
-          <Link href="suit">Suit</Link>{" "}
+          <Link href="suit" className="hover:underline">
+            Suit
+          </Link>{" "}
         </li>
         <li>
-          <Link href="weddings">Weddings</Link>
+          <Link href="weddings" className="hover:underline">
+            Weddings
+          </Link>
         </li>
         <li>
-          <Link href="coats">Coats</Link>
+          <Link href="coats" className="hover:underline">
+            Coats
+          </Link>
         </li>
         <li>
-          <Link href="shirts">Shirts</Link>
+          <Link href="shirts" className="hover:underline">
+            Shirts
+          </Link>
         </li>
         <li>
-          <Link href="trousers">Trousers</Link>
+          <Link href="trousers" className="hover:underline">
+            Trousers
+          </Link>
         </li>
         <li>
-          <Link href="casual">Casual</Link>
+          <Link href="casual" className="hover:underline">
+            Casual
+          </Link>
         </li>
         <li>
-          <Link href="shoes-and-accessories">Shoes & accessories</Link>{" "}
+          <Link href="shoes-and-accessories" className="hover:underline">
+            Shoes & accessories
+          </Link>{" "}
         </li>
         <li>
-          <Link href="custom-made">Custom Made</Link>
+          <Link href="custom-made" className="hover:underline">
+            Custom Made
+          </Link>
         </li>
       </ul>
       <ul className="flex justify-evenly w-[15%]">

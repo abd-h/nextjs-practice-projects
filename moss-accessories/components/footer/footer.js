@@ -7,106 +7,13 @@ import youtubeIcon from "@/assets/youtube_icon.png";
 import instagramIcon from "@/assets/instagram_icon.png";
 import pinterestIcon from "@/assets/pinterest_icon.png";
 import prostateCancerLogo from "@/assets/prostatecancerlogo.webp";
+import FooterNavLinks from "./footer-navLinks";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-[#28252a] text-white">
-      <section>
-        <nav className="tracking-wider flex justify-evenly w-2/3 m-auto pt-24">
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>
-              <h2 className="font-bold my-4">Help</h2>
-            </li>
-            <li>
-              {" "}
-              <Link href="/">Delivery information</Link>
-            </li>
-
-            <li>
-              <Link href="/">Refunds & returns</Link>
-            </li>
-
-            <li>
-              <Link href="/">Refer a friend</Link>
-            </li>
-            <li>
-              <Link href="/"></Link>
-            </li>
-            <li>
-              <Link href="">Contact us</Link>
-            </li>
-            <li>
-              <Link href="/">Terms and conditions</Link>
-            </li>
-            <li>
-              <Link href="/">Privacy policy</Link>
-            </li>
-            <li>
-              <Link href="">Cookie policy</Link>
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>
-              <h2 className="font-bold my-4">Style hints</h2>
-            </li>
-            <li>
-              <Link href="">Size guide</Link>
-            </li>
-            <li>
-              <Link href="/">Item care</Link>
-            </li>
-            <li>
-              <Link href="/">Inside pocket</Link>
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>
-              <h2 className="font-bold my-4">About us</h2>
-            </li>
-            <li>
-              <Link href="/">Moss history</Link>
-            </li>
-            <li>
-              <Link href="/">Careers</Link>
-            </li>
-            <li>
-              <Link href="/">Affiliates</Link>
-            </li>
-            <li>
-              <Link href="/">Coporate</Link>
-            </li>
-            <li>
-              <Link href="/">Modern slavery statement</Link>
-            </li>
-            <li>
-              <Link href="/">Gender pay gap</Link>
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>
-              <h2 className="font-bold my-4">About us</h2>
-            </li>
-            <li>
-              <Link href="/">Moss box subscription</Link>
-            </li>
-            <li>
-              <Link href="/">Graduate discount</Link>
-            </li>
-            <li>
-              <Link href="/">Gift cards</Link>
-            </li>
-            <li>
-              <Link href="/">Key workers discount</Link>
-            </li>
-            <li>
-              <Link href="/">Student discount</Link>
-            </li>
-            <li>
-              <Link href="/">Purple disabled discount</Link>
-            </li>
-          </ul>
-        </nav>
-      </section>
+      <FooterNavLinks />
+      {/** Social media links */}
       <section className="h-[400px] border-y border-y-[#777777] mt-12 flex items-center justify-center  relative">
         <div className="w-1/2 justify-center ">
           {" "}
@@ -135,35 +42,35 @@ export default function Footer() {
               className=" flex justify-start ml-[-10px] my-4  items-center gap-2
             "
             >
-              <Link className="" href="">
+              <Link className="hover:animate-bounce" href="">
                 <Image
                   className="w-[24px] rounded-full overflow-hidden "
                   src={facebookIcon}
                   alt="Facebook logo"
                 />
               </Link>
-              <Link href="">
+              <Link href="" className="hover:animate-bounce">
                 <Image
                   className="w-[20px] rounded-full overflow-hidden "
                   src={tiktokIcon}
                   alt="TikTok logo"
                 />
               </Link>
-              <Link href="">
+              <Link href="" className="hover:animate-bounce">
                 <Image
                   className="w-[24px] rounded-full overflow-hidden "
                   src={pinterestIcon}
                   alt="Pinterest logo"
                 />
               </Link>
-              <Link href="">
+              <Link href="" className="hover:animate-bounce">
                 <Image
                   className="w-[24px] rounded-full overflow-hidden "
                   src={instagramIcon}
                   alt="Instagram logo"
                 />
               </Link>
-              <Link href="">
+              <Link href="" className="hover:animate-bounce">
                 <Image
                   className="w-[24px] rounded-full overflow-hidden "
                   src={youtubeIcon}
@@ -175,26 +82,32 @@ export default function Footer() {
         </div>
         <div className="h-full border-r border-r-[#777777]"></div>
         <div className="justify-self-center w-1/2">
-          <div className=" flex flex-col w-1/2 items-center justify-center m-auto">
+          <div className=" flex flex-col w-1/2 items-start justify-start m-auto">
             <Link href="/">
               <Image
                 className=""
                 src={prostateCancerLogo}
                 alt="Prostate cancer logo"
                 width="158"
-                height="93"
+                height="83"
               />
             </Link>
-            <p>
+            <p className="text-[0.85rem] tracking-wider leading-7">
               Most men with early prostate cancer don't have any syptoms. check
               your risk in 30 seconds
             </p>
-            <Link href="/">
-              <button>check your risk</button>
+            <Link className="my-4" href="/">
+              <button className="text-sm font-bold first-letter:uppercase underline ws-wide tracking-widest">
+                check your risk
+              </button>
             </Link>
           </div>
         </div>
       </section>
+      <p className="py-4 text-center mb-[1px] text-xs tracking-wider">
+        &copy; 2025 Moss Limited. All rights reserved. Registration
+        No.7945643281
+      </p>
     </footer>
   );
 }

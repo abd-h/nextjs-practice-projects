@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,7 +14,28 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      // wordSpacing: {
+      //   tight: '0.125rem',
+      //   normal: '0.25rem',
+      //   wide: '0.5rem'
+      // }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities, theme }) {
+      const newUtilities = {
+        ".ws-tight": {
+          wordSpacing: "0.125rem",
+        },
+        ".ws-normal": {
+          wordSpacing: "0.25rem",
+        },
+        ".ws-wide": {
+          wordSpacing: "0.5rem",
+        },
+      };
+
+      addUtilities(newUtilities, ["responsive"]);
+    }),
+  ],
 };
