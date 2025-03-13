@@ -9,6 +9,7 @@ import searchIcon from "@/assets/search-icon.png";
 import profileIcon from "@/assets/profile-icon-2.png";
 import basketIcon from "@/assets/basket-icon.png";
 import CanvasPanel from "./canvas-panel";
+import { navlinkPanelContent } from "@/lib/dummy-navlink-list";
 
 export default function NavLinks() {
   const [sticky, setSticky] = useState(false);
@@ -35,7 +36,8 @@ export default function NavLinks() {
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-  console.log(window.scrollY);
+  const panelContent = navlinkPanelContent;
+  console.log(panelContent.options);
   
     
   return (
@@ -56,6 +58,9 @@ export default function NavLinks() {
           </Link>
         </li>
       </ul>
+
+      {/* Nav links*/ }
+      
       <ul className="flex justify-evenly w-[60%] self-center items-center relative ">
         <li
           onMouseEnter={handleMouseEnter}
@@ -106,6 +111,11 @@ export default function NavLinks() {
           </Link>
         </li>
       </ul>
+
+
+
+
+      {/* Basket icons */}
       <ul className="flex justify-evenly w-[15%]">
         <li>
           <Link href="/">

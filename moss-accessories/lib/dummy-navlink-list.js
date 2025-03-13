@@ -1,5 +1,6 @@
-export const navlinkList = [
+export const navlinkPanelContent = [
   {
+    id: 'suits',
     product_name: "Suits",
     options: {
       style_name: "Style",
