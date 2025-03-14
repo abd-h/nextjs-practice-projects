@@ -62,14 +62,10 @@ export default function NavLinks() {
       {/* Nav links*/ }
       
       <ul className="flex justify-evenly w-[60%] self-center items-center relative ">
-        <li
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="relative"
-        >
+        
           
           <CanvasPanel />
-        </li>
+        
         <li>
           <Link href="suit" className="hover:underline">
             Suit
