@@ -1,30 +1,28 @@
-
 //NavItems along with panel content
 
 const { default: Link } = require("next/link");
 
 const style = [
-    "2 peice suit",
-    "3 peice suit",
-    "Tuxedos",
-    "Luxury suits",
-    "Double-breasted suits",
-    "Tweed suits",
-    "Linen suits",
-    "View all suits",
-    "Waistcoats",
- 
+  "2 peice suit",
+  "3 peice suit",
+  "Tuxedos",
+  "Luxury suits",
+  "Double-breasted suits",
+  "Tweed suits",
+  "Linen suits",
+  "View all suits",
+  "Waistcoats",
 ];
 const occassions = [
-        "Wedding party",
-        "Wedding guest",
-        "All wedding suits",
-        "Race day suits",
-        "Black tie",
-        "Prom",
-        "Graduation",
-        "Interview attire",
-      ]
+  "Wedding party",
+  "Wedding guest",
+  "All wedding suits",
+  "Race day suits",
+  "Black tie",
+  "Prom",
+  "Graduation",
+  "Interview attire",
+];
 
 export const navItems = [
   {
@@ -36,12 +34,20 @@ export const navItems = [
     id: "suits",
     label: "Suits",
     panelContent: (
-      <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">Style</h3>
-        <ul className="space-y-3">
+      <div className="p-6 flex">
+        <ul className="space-y-3 flex flex-col">
+          <h3 className="text-2xl font-semibold mb-4">Style</h3>
           {style.map((item, i) => (
             <li key={i}>
               <Link href="/">{item}</Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="flex space-y-3 flex-col">
+          <h3 className="text-2xl font-semibold mb-4">Occoassins</h3>
+          {occassions.map((item, i) => (
+            <li key={i}>
+              <Link href="#">{item}</Link>{" "}
             </li>
           ))}
         </ul>
@@ -83,7 +89,7 @@ export const navItems = [
   },
   {
     id: "shirts",
-    label: "shirts",
+    label: "Shirts",
     panelContent: (
       <div>
         <h3>Shirts</h3>
@@ -99,7 +105,7 @@ export const navItems = [
   },
   {
     id: "trousers",
-    label: "trousers",
+    label: "Trousers",
     panelContent: (
       <div>
         <h3>Trousers</h3>
@@ -131,7 +137,7 @@ export const navItems = [
   },
   {
     id: "custom-made",
-    label: "Weddings",
+    label: "Custom made",
     panelContent: (
       <div>
         <h3>Custom Made</h3>

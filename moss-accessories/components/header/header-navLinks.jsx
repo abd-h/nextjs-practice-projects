@@ -10,6 +10,7 @@ import profileIcon from "@/assets/profile-icon-2.png";
 import basketIcon from "@/assets/basket-icon.png";
 import CanvasPanel from "./canvas-panel";
 import { navlinkPanelContent } from "@/lib/dummy-navlink-list";
+import { navItems } from "./canves-panel-2";
 
 export default function NavLinks() {
   const [sticky, setSticky] = useState(false);
@@ -63,49 +64,7 @@ export default function NavLinks() {
       
       <ul className="flex justify-evenly w-[60%] self-center items-center relative ">
         
-          
-          <CanvasPanel />
-        
-        <li>
-          <Link href="suit" className="hover:underline">
-            Suit
-          </Link>{" "}
-        </li>
-        <li>
-          <Link href="weddings" className="hover:underline">
-            Weddings
-          </Link>
-        </li>
-        <li>
-          <Link href="coats" className="hover:underline">
-            Coats
-          </Link>
-        </li>
-        <li>
-          <Link href="shirts" className="hover:underline">
-            Shirts
-          </Link>
-        </li>
-        <li>
-          <Link href="trousers" className="hover:underline">
-            Trousers
-          </Link>
-        </li>
-        <li>
-          <Link href="casual" className="hover:underline">
-            Casual
-          </Link>
-        </li>
-        <li>
-          <Link href="shoes-and-accessories" className="hover:underline">
-            Shoes & accessories
-          </Link>{" "}
-        </li>
-        <li>
-          <Link href="custom-made" className="hover:underline">
-            Custom Made
-          </Link>
-        </li>
+       {navItems.map((item, i) => <CanvasPanel key={item.id} label={item.label} item={item} i={i} />)}
       </ul>
 
 

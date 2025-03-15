@@ -156,7 +156,7 @@ const Navbar = () => {
               {/* Canvas Panel */}
               {activePanel === index && (
                 <div
-                  className="absolute left-0 top-full w-[1400px] bg-white border-t border-gray-200 shadow-lg "
+                  className="absolute left-0 top-full w-[400px] bg-white border-t border-gray-200 shadow-lg "
                   style={{ height: "50vh" }}
                 >
                   {item.panelContent}
