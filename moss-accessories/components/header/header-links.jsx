@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ChangingText from "./changing-text";
 
 
 export default function HeaderLinks() {
@@ -19,11 +20,7 @@ export default function HeaderLinks() {
         <li className=" border-r-[1px] py-2 px-8 text-center"><Link href="/" className="hover:underline">Gift Cards</Link></li>
         <li className="w-[30%]">
           <ul className="flex mb-0 ps-0  ">
-            <li className=" w-full  ">
-              <Link href="/" className="hover:underline">
-                Book Store Appoinment
-              </Link>
-            </li>
+           <ChangingText />
           </ul>
         </li>
         <li className=" h-full border-l-[1px] w-[30%]">

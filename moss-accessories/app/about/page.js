@@ -139,34 +139,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm relative z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex space-x-8 relative">
-          {navItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="relative"
-              onMouseEnter={() => setActivePanel(index)}
-              onMouseLeave={() => setActivePanel(null)}
-            >
-              <button className="py-6 text-gray-600 hover:text-black transition-colors">
-                {item.title}
-              </button>
-
-              {/* Canvas Panel */}
-              {activePanel === index && (
-                <div
-                  className="absolute left-0 top-full w-[400px] bg-white border-t border-gray-200 shadow-lg "
-                  style={{ height: "50vh" }}
-                >
-                  {item.panelContent}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </nav>
+    <div className="group inline-block relative">
+      <span className="text-lg font-semibold">Hover over me</span>
+      <div className="absolute left-0 right-0 bottom-0 h-[2px] w-0 bg-black group-hover:animate-underlineFromCenter"></div>
+    </div>
   );
 };
 
