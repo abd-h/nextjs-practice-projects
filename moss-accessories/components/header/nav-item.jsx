@@ -25,6 +25,7 @@ export default function NavItem ({ item }) {
             }
           `}
         >{item.panelContent}</div>
+        
       </div>
     </li>
   );

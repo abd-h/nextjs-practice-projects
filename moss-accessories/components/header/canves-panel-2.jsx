@@ -71,7 +71,12 @@ export const navItems = [
           <h3 className="text-sm font-semibold mb-4">Style</h3>
           {navSublinks.style.map((item, i) => (
             <li key={i}>
-              <Link href="/">{item}</Link>
+              <div className="group inline-block relative">
+                <Link href="/" className="group relative">
+                  {item}
+                  <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
@@ -79,7 +84,10 @@ export const navItems = [
           <h3 className="text-sm font-semibold mb-4">Occoassins</h3>
           {navSublinks.occassions.map((item, i) => (
             <li key={i}>
-              <Link href="#">{item}</Link>{" "}
+              <Link className="relative group" href="/">
+                {item}
+                <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+              </Link>
             </li>
           ))}
         </ul>
@@ -87,7 +95,10 @@ export const navItems = [
           <h3 className="text-sm font-semibold mb-4">Suits by color</h3>
           {navSublinks.suits_by_colour.map((item, i) => (
             <li key={i}>
-              <Link href="#">{item}</Link>{" "}
+              <Link href="#" className="group relative">
+                {item}
+                <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+              </Link>{" "}
             </li>
           ))}
         </ul>
@@ -95,7 +106,11 @@ export const navItems = [
           <h3 className="text-sm font-semibold mb-4">Jackets</h3>
           {navSublinks.jackets.map((item, i) => (
             <li key={i}>
-              <Link href="#">{item}</Link>{" "}
+              <Link href="#" className="group relative">
+                {item}
+
+                <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+              </Link>{" "}
             </li>
           ))}
         </ul>
@@ -103,7 +118,10 @@ export const navItems = [
           <h3 className="text-sm font-semibold mb-4">Services</h3>
           {navSublinks.services.map((item, i) => (
             <li key={i}>
-              <Link href="#">{item}</Link>{" "}
+              <Link href="#" className='group relative' >
+                {item}
+                <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+              </Link>{" "}
             </li>
           ))}
         </ul>

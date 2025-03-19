@@ -1,149 +1,80 @@
-// components/Navbar.js
-"use client";
-import { useState } from "react";
+'use client';
 
-const Navbar = () => {
-  const [activePanel, setActivePanel] = useState(null);
+import { useEffect, useState } from "react";
 
-  const navItems = [
-    {
-      id: 1,
-      title: "New In",
-      panelContent: (
-        <div className="p-8">
-          <h2 className="text-2xl mb-4">New In</h2>
-          <ul className="space-y-3">
-            <li>
-              <a href="/new-in/clothing" className="hover:text-gray-700">
-                Clothing
-              </a>
-            </li>
-            <li>
-              <a href="/new-in/shoes" className="hover:text-gray-700">
-                Shoes
-              </a>
-            </li>
-            <li>
-              <a href="/new-in/accessories" className="hover:text-gray-700">
-                Accessories
-              </a>
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      id: 2,
-      title: "Clothing",
-      panelContent: (
-        <div className="p-8">
-          <h2 className="text-2xl mb-4">Clothing</h2>
-          <ul className="space-y-3">
-            <li>
-              <a href="/clothing/jackets" className="hover:text-gray-700">
-                Jackets
-              </a>
-            </li>
-            <li>
-              <a href="/clothing/shirts" className="hover:text-gray-700">
-                Shirts
-              </a>
-            </li>
-            <li>
-              <a href="/clothing/trousers" className="hover:text-gray-700">
-                Trousers
-              </a>
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      id: 3,
-      title: "Shoes",
-      panelContent: (
-        <div className="p-8">
-          <h2 className="text-2xl mb-4">Shoes</h2>
-          <ul className="space-y-3">
-            <li>
-              <a href="/shoes/boots" className="hover:text-gray-700">
-                Boots
-              </a>
-            </li>
-            <li>
-              <a href="/shoes/sneakers" className="hover:text-gray-700">
-                Sneakers
-              </a>
-            </li>
-            <li>
-              <a href="/shoes/loafers" className="hover:text-gray-700">
-                Loafers
-              </a>
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      id: 4,
-      title: "Accessories",
-      panelContent: (
-        <div className="p-8">
-          <h2 className="text-2xl mb-4">Accessories</h2>
-          <ul className="space-y-3">
-            <li>
-              <a href="/accessories/bags" className="hover:text-gray-700">
-                Bags
-              </a>
-            </li>
-            <li>
-              <a href="/accessories/watches" className="hover:text-gray-700">
-                Watches
-              </a>
-            </li>
-            <li>
-              <a href="/accessories/jewelry" className="hover:text-gray-700">
-                Jewelry
-              </a>
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      id: 5,
-      title: "Brands",
-      panelContent: (
-        <div className="p-8">
-          <h2 className="text-2xl mb-4">Brands</h2>
-          <ul className="space-y-3">
-            <li>
-              <a href="/brands/gucci" className="hover:text-gray-700">
-                Gucci
-              </a>
-            </li>
-            <li>
-              <a href="/brands/prada" className="hover:text-gray-700">
-                Prada
-              </a>
-            </li>
-            <li>
-              <a href="/brands/balenciaga" className="hover:text-gray-700">
-                Balenciaga
-              </a>
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-  ];
+export default function SignupPopup() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Check if user has already dismissed the popup
+      const hasDismissed = localStorage.getItem("hasDismissedPopup");
+      if (!hasDismissed) {
+        setShowPopup(true);
+      }
+    }, 2000); // 20 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle email submission here
+    console.log("Email submitted:", email);
+    // Close popup
+    setShowPopup(false);
+    // Store dismissal in localStorage
+    localStorage.setItem("hasDismissedPopup", "true");
+  };
+
+  const handleClose = () => {
+    setShowPopup(false);
+    localStorage.setItem("hasDismissedPopup", "true");
+  };
+
+  if (!showPopup) return null;
 
   return (
-    <div className="group inline-block relative">
-      <span className="text-lg font-semibold">Hover over me</span>
-      <div className="absolute left-0 right-0 bottom-0 h-[2px] w-0 bg-black group-hover:animate-underlineFromCenter"></div>
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div className="bg-white rounded-lg p-8 max-w-sm w-full mx-4 relative">
+        {/* Close button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        >
+          ×
+        </button>
+
+        {/* Content */}
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Welcome! 🎉</h2>
+          <p className="text-gray-600 mb-6">
+            Get 10% off on your first order when you sign up
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Claim My 10% Off
+            </button>
+          </form>
+
+          <p className="text-sm text-gray-500 mt-4">
+            By signing up, you agree to our Terms of Service
+          </p>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default Navbar;
+}

@@ -16,14 +16,13 @@ export default {
       },
 
       keyframes: {
-        underlineFromCenter: {
-          "0%": { width: "0%", left: "50%" },
-          "50%": { width: "50%", left: "25%" },
-          "100%": { width: "100%", left: "0%" },
+        underline: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
         },
       },
       animation: {
-        underlineFromCenter: "underlineFromCenter 0.5s ease-out",
+        underline: "underline 0.5s ease-out forwards",
       },
       // wordSpacing: {
       //   tight: '0.125rem',

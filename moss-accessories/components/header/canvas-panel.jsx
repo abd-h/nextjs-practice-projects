@@ -25,7 +25,7 @@ export default function CanvasPanel({ label, item, i }) {
         >
           
           <button className="mb-4 font-bold">{label}</button>
-          <div class="h-[2px] bg-black w-0 hover:animate-underline"></div>
+          <div className=" bg-[#282828] w-0 hover:animate-underline"></div>
 
           {/** Dropdown Canvas Panel */}
           <div
@@ -40,9 +40,11 @@ export default function CanvasPanel({ label, item, i }) {
           >
             {isOpen === i && (
               <div className={`p-2 m-auto`}>
+              
                 <ul className="space-y-3 flex justify-between m-auto">
                   {item.panelContent}
-                  {/* Add more product links as needed */}
+                  {/* Add more product links as needed */ }
+                  
                 </ul>
               </div>
             )}

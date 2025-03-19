@@ -64,7 +64,8 @@ export default function NavLinks() {
       
       <ul className="flex justify-evenly w-[60%] self-center items-center relative ">
         
-       {navItems.map((item, i) => <CanvasPanel key={item.id} label={item.label} item={item} i={i} />)}
+        { navItems.map((item, i) => <CanvasPanel key={ item.id } label={ item.label } item={ item } i={ i } />) }
+        
       </ul>
 
 
