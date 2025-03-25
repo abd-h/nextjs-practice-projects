@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function FooterNavLinks() {
 
     return (
-      <section>
-        <nav className="tracking-wider flex justify-evenly w-2/3 m-auto pt-16">
+      <footer >
+        <nav className=" tracking-wider flex justify-evenly w-2/3 m-auto pt-16">
           <ul className="flex flex-col gap-2 text-sm">
             <li>
               <h2 className="font-bold my-4">Help</h2>
@@ -145,6 +145,6 @@ export default function FooterNavLinks() {
             </li>
           </ul>
         </nav>
-      </section>
+      </footer>
     );
 }

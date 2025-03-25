@@ -41,7 +41,7 @@ export default function PopupOffer() {
         {/* Content*/}
         <div className="flex flex-col gap-4 w-full absolute top-[30%] left-1/2">
           <div className='flex flex-col items-center max-w-[20rem] gap-3'>
-            <h2 className="text-3xl font-extrabold text-center">
+            <h2 className="text-3xl font-[900] text-center">
               Sign up to receive <br /> 10% off{" "}
             </h2>
             <p className='relative text-xl'>Your first order <span className='top-0'>*</span></p>
@@ -57,7 +57,7 @@ export default function PopupOffer() {
               className="placeholder:text-black placeholder:tracking-wider w-full max-w-full p-[10px] resize-y border-[1px] border-[black]"
             />
                       <button type="submit" className='py-2 w-[12rem] bg-black text-white border-black font-bold mx-auto my-4 uppercase '>Get My 10% OFF</button>
-                      <p className='text-xs tracking-wider font-[600]'>*When you spend £50 or more. See <Link className='underline placeholder:font-bold text-[black]' href='#' >terms and conditions</Link> </p>
+                      <p className='text-sm my-8 text-center tracking-wider font-[600]'>*When you spend £50 or more. See <Link className='underline placeholder:font-bold text-[black]' href='#' >terms and conditions</Link> </p>
           </form>
         </div>
       </div>
