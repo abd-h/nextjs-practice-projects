@@ -24,6 +24,14 @@ export default {
       animation: {
         underline: "underline 0.5s ease-out forwards",
       },
+      screens: {
+        small_screens: {'raw': '(max-width:800px)'},
+        larger_screens: { 'raw': '(min-width: 701px) ' }, 
+        md_screens: {
+          'raw': '(min-width: 801px) and (max-width: 1000px) '
+        }
+      }
+
       // wordSpacing: {
       //   tight: '0.125rem',
       //   normal: '0.25rem',

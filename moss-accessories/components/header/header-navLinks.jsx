@@ -11,6 +11,7 @@ import basketIcon from "@/assets/basket-icon.png";
 import CanvasPanel from "./canvas-panel";
 import { navlinkPanelContent } from "@/lib/dummy-navlink-list";
 import { navItems } from "./canves-panel-2";
+import NavbarSystem from "./canvas_panel3";
 
 export default function NavLinks() {
   const [sticky, setSticky] = useState(false);
@@ -62,11 +63,11 @@ export default function NavLinks() {
 
       {/* Nav links*/ }
       
-      <ul className="flex justify-evenly w-[60%] self-center items-center relative ">
+    
         
-        { navItems.map((item, i) => <CanvasPanel key={ item.id } label={ item.label } item={ item } i={ i } />) }
+        <NavbarSystem /> 
         
-      </ul>
+     
 
 
 
