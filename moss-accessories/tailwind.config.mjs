@@ -26,7 +26,7 @@ export default {
       },
       screens: {
         small_screens: {'raw': '(max-width:800px)'},
-        larger_screens: { 'raw': '(min-width: 701px) ' }, 
+        larger_screens: { 'raw': '(min-width: 1001px) ' }, 
         md_screens: {
           'raw': '(min-width: 801px) and (max-width: 1000px) '
         }

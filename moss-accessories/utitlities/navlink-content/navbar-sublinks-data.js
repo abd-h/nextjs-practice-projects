@@ -1,14 +1,14 @@
 export const suits = {
   style: [
-    "2 peice suit",
-    "3 peice suit",
-    "Tuxedos",
-    "Luxury suits",
-    "Double-breasted suits",
-    "Tweed suits",
-    "Linen suits",
-    "View all suits",
-    "Waistcoats",
+    {title:"2 peice suit", href: '/suits/2-peice-suit'},
+    {title:"3 peice suit", href: '/suits/3-peice-suit'},
+    {title: "Tuxedos", href: '/suits/tuxedos'},
+    {title: "Luxury suits", href: '/suits/luxury-suits'},
+    {title: "Double-breasted suits", href: '/suits/double-breasted-suits'},
+    {title: "Tweed suits", href: '/suits/tweed-suits'},
+    {title: "Linen suits", href: '/suits/linen-suits' },
+    {title: "View all suits", href: '/suits/view-all-suits'},
+    {title: "Waistcoats", href: '/suits/waistcoats'},
   ],
   occassions: [
     "Wedding party",
