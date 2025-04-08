@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from 'react';
+import { useState } from "react";
 
-export default function NavItem ({ item }) {
+export default function NavItem({ item }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleCanvasPanel = () => {
@@ -24,9 +24,10 @@ export default function NavItem ({ item }) {
                 : "-translate-y-2 opacity-0 pointer-events-none"
             }
           `}
-        >{item.panelContent}</div>
-        
+        >
+          {item.panelContent}
+        </div>
       </div>
     </li>
   );
-};
+}

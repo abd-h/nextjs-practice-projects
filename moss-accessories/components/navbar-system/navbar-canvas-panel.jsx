@@ -1,19 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { navItems } from "./canves-panel-2";
+import { navItems } from "../deleted-content/canves-panel-2";
 import { navlinkPanelContent } from "@/lib/dummy-navlink-list";
 
 export default function CanvasPanel({ label, item, i }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+  // const handleToggle = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
-  const s = navlinkPanelContent.map((item) => {
-    console.log(item.options.style);
-  });
+  // const s = navlinkPanelContent.map((item) => {
+  //   console.log(item.options.style);
+  // });
 
   return (
     <>

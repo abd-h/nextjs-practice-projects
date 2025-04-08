@@ -1,41 +1,162 @@
 export const suits = {
   style: [
-    {title:"2 peice suit", href: '/suits/2-peice-suit'},
-    {title:"3 peice suit", href: '/suits/3-peice-suit'},
-    {title: "Tuxedos", href: '/suits/tuxedos'},
-    {title: "Luxury suits", href: '/suits/luxury-suits'},
-    {title: "Double-breasted suits", href: '/suits/double-breasted-suits'},
-    {title: "Tweed suits", href: '/suits/tweed-suits'},
-    {title: "Linen suits", href: '/suits/linen-suits' },
-    {title: "View all suits", href: '/suits/view-all-suits'},
-    {title: "Waistcoats", href: '/suits/waistcoats'},
+    {
+      id: "suits",
+      title: "2 peice suit",
+      href: "/suits/2-peice-suit",
+    },
+    {
+      id: "3-peice-suit",
+      title: "3 peice suit",
+      href: "/suits/3-peice-suit",
+    },
+    {
+      id: "tuxedos",
+      title: "Tuxedos",
+      href: "/suits/tuxedos",
+    },
+    {
+      id: "luxury",
+      title: "Luxury suits",
+      href: "/suits/luxury-suits",
+    },
+    {
+      id: "double-breasted",
+      title: "Double-breasted suits",
+      href: "/suits/double-breasted-suits",
+    },
+    {
+      id: "tweed-suit",
+      title: "Tweed suits",
+      href: "/suits/tweed-suits",
+    },
+    {
+      id: "linen-suits",
+      title: "Linen suits",
+      href: "/suits/linen-suits",
+    },
+    {
+      id: "view-all-suits",
+      title: "View all suits",
+      href: "/suits/view-all-suits",
+    },
+    {
+      id: "waistcoat",
+      title: "Waistcoats",
+      href: "/suits/waistcoats",
+    },
   ],
   occassions: [
-    "Wedding party",
-    "Wedding guest",
-    "All wedding suits",
-    "Race day suits",
-    "Black tie",
-    "Prom",
-    "Graduation",
-    "Interview attire",
+    {
+      id: "wedding-party",
+      title: "Wedding party",
+      href: "/occassions/wedding-party",
+    },
+    {
+      id: "wedding-guest",
+      title: "Wedding guest",
+      href: "/occassions/wedding-guest",
+    },
+    {
+      id: "all-wedding-suits",
+      title: "All wedding suits",
+      href: "/occassions/all-wedding-suits",
+    },
+    {
+      id: "race-day-suits",
+      title: "Race day suits",
+      href: "/occassions/race-day-suits",
+    },
+    {
+      id: "black-tie",
+      title: "Black tie",
+      href: "/occassions/black-tie",
+    },
+    {
+      id: "prom",
+      title: "Prom",
+      href: "/occassions/prom",
+    },
+
+    {
+      id: "graduation",
+      title: "Graduation",
+      href: "/occassions/graduation",
+    },
+    {
+      id: "interview-attire",
+      title: "Interview attire",
+      href: "/occassions/interview-attire",
+    },
   ],
   suits_by_colour: [
-    "Blue suits",
-    "Navy suits",
-    "Grey suits",
-    "Green suits",
-    "Black suits",
-    "Beige suits",
-    "Brown suits",
-    "White suits",
+    {
+      id: "suits-by-color",
+      title: "Blue suits",
+      href: "/suits-by-color/blue-suits",
+    },
+    {
+      id: "navyy-suits",
+      title: "Navy suits",
+      href: "/suits-by-color/navy-suits",
+    },
+    {
+      id: "grey-suits",
+      title: "Grey suits",
+      href: "/suits-by-color/grey-suits",
+    },
+    {
+      id: "green-suits",
+      title: "Green suits",
+      href: "/suits-by-color/green-suits",
+    },
+    {
+      id: "black-jackets",
+      title: "Black suits",
+      href: "/suits-by-color/black-jackets",
+    },
+    {
+      id: "beige-suits",
+      title: "Beige suits",
+      href: "/suits-by-color/beige-suits",
+    },
+    {
+      id: "brown-suits",
+      title: "Brown suits",
+      href: "/suits-by-color/brown-suits",
+    },
+    {
+      id: "white-suits",
+      title: "White suits",
+      href: "/suits-by-color/white-suits",
+    },
   ],
   jackets: [
-    "Blazers",
-    "Dinner jackets",
-    "Valvet jackets",
-    "Tweed jackets",
-    "Casual jackets",
+    {
+      id: "blazers",
+      title: "Blazers",
+      href: "/suits-by-color/blazers",
+    },
+    {
+      id: "dinner-jackets",
+      title: "Dinner jackets",
+      href: "/suits-by-color/dinner-jack",
+    },
+    {
+      id: "valvet-jackets",
+      title: "Valvet jackets",
+      href: "/suits-by-color/valvet-jackets",
+    },
+    {
+      id: "tweed-jackets",
+      title: "Tweed jackets",
+      href: "/suits-by-color/tweed-jackets",
+    },
+    {
+      id: "casual-jackets",
+      title: "Casual jackets",
+      href: "/suits-by-color/casual-jackets",
+    },
   ],
   services: [
     "Custom made",

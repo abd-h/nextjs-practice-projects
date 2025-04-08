@@ -25,11 +25,12 @@ export default {
         underline: "underline 0.5s ease-out forwards",
       },
       screens: {
-        small_screens: {'raw': '(max-width:800px)'},
-        larger_screens: { 'raw': '(min-width: 1001px) ' }, 
-        md_screens: {
+        small_screens: { 'raw': '(max-width:800px)' },
+         md_screens: {
           'raw': '(min-width: 801px) and (max-width: 1000px) '
-        }
+        },
+        larger_screens: { 'raw': '(min-width: 1001px) ' }, 
+       
       }
 
       // wordSpacing: {
@@ -55,5 +56,8 @@ export default {
 
       addUtilities(newUtilities, ["responsive"]);
     }),
+    
   ],
+
 };
+

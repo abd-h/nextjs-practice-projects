@@ -23,7 +23,7 @@ export default function HeroBanner() {
       </div>
       <div className="hidden small_screens:block overflow-hidden mb-6">
         <Link href="/about">
-          <section className=" relative h-[430px] w-full m-auto bg-[url(@/assets/hero_mobile-min.jpg)] bg-no-repeat ">
+          <section className=" relative h-[430px] w-full m-auto bg-[url(@/assets/hero_mobile-min.jpg)] bg-no-repeat bg-cover outline">
             <div className="absolute small_screens:top-[35%]  left-[19%] ">
               <h2 className="font-[900] text-white larger_screens:text-6xl small_screens:text-3xl my-4">
                 Ties

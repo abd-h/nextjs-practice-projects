@@ -5,7 +5,7 @@ export default function ProductLinks({ image, title, href }) {
   return (
     <section className='mb-8 capitalize w-full'>
       <Link href={href}>
-        <Image src={image} className='w-[120%]' alt={title} />
+        <Image src={image} className='w-[120%]' alt={title} priority />
       </Link>
       <h2 className='font-bold tracking-wide mt-4 mb-2 text-2xl'>{title}</h2>
       <Link href={href}>

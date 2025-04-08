@@ -2,39 +2,27 @@
 
 import { useState, useEffect } from "react";
 
-import {
-  CustomMadeContent,
-  ShirtsContent,
-  ShoesAndAccessoriesContent,
-  SuitsContent,
-  TrousersContent,
-  WeddingsContent,
-} from "@/utitlities/navlink-content/product-content";
+
+import ComplexNavbar from "./complex-navbar";
+import { navItems } from "@/utitlities/navlink-content/navbar-item-data";
 
 export default function NavbarSystem() {
   const [activeContent, setActiveContent] = useState(null);
   const [isPanelVisible, setIsPanelVisible] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-console.log(isMounted);
 
-  const navItems = [
-    { id: "suits", title: "Suits", content: SuitsContent() },
-    { id: "weddings", title: "Weddings", content: WeddingsContent() },
-    { id: "shirts", title: "Shirts", content: ShirtsContent() },
-    { id: "trousers", title: "Trousers", content: TrousersContent() },
-    {
-      id: "shoes_and_accessories",
-      title: "Shoes & accessories",
-      content: ShoesAndAccessoriesContent(),
-    },
-    { id: "custom_made", title: "Custom Made", content: CustomMadeContent() },
-  ];
+
+  
+console.log(!navItems[0].hasOwnProperty("content"));
 
   // Handle panel visibility with delay
   useEffect(() => {
-    if (activeContent && isMounted) {
+    if (
+      (activeContent && isMounted)
+    ) {
       setIsPanelVisible(true);
-    } else {
+    } 
+    else {
       const timer = setTimeout(() => setIsPanelVisible(false), 300);
 
       return () => clearTimeout(timer);
@@ -43,13 +31,16 @@ console.log(isMounted);
 
   return (
     <div
-      className="relative"
+      className="relative w-1/2"
       onMouseLeave={() => {
         setActiveContent(null);
         setIsMounted(false);
       }}
     >
-      <nav className="flex items-center gap-24 relative">
+      <nav className="small_screens:hidden md_screens:hidden flex items-center  justify-between  relative  larger_screens:m-2">
+        <div className="text-grey-600 text-sm px-2 hover:text-blue-600 ">
+          New{" "}
+        </div>
         {navItems.map((item) => (
           <ul
             key={item.id}
@@ -67,14 +58,13 @@ console.log(isMounted);
       </nav>
       {/* Canvas Panel */}
       <div
-        className={`fixed left-0 w-full  bg-white shadow-2xl  transition-opacity duration-0 ${
+        className={`fixed left-0 w-full  bg-white   transition-opacity duration-0 ${
           isPanelVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }  `}
         onMouseEnter={() => setActiveContent(activeContent)}
       >
         {navItems.map((item) => (
           <div
-           
             key={item.id}
             className={`transition-opacity duration-0 ${
               activeContent === item.id ? "opacity-100" : "opacity-0 absolute"
@@ -84,6 +74,7 @@ console.log(isMounted);
           </div>
         ))}
       </div>
+      
     </div>
   );
 }
