@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 import NavbarSystem from "./navbar-system";
-import ComplexNavbar from "./complex-navbar";
+import ComplexNavbar from "./mobile-navbar";
 import NavLinksIcons from "./navLinks-icons";
 
 

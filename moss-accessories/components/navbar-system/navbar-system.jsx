@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 
-import ComplexNavbar from "./complex-navbar";
+import ComplexNavbar from "./mobile-navbar";
 import { navItems } from "@/utitlities/navlink-content/navbar-item-data";
 
 export default function NavbarSystem() {

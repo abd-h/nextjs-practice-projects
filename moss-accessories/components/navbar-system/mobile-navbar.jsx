@@ -1,14 +1,25 @@
 
 
 "use client";
-import { useState } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import { navItems } from "@/utitlities/navlink-content/navbar-item-data";
+import { MobileMenueContext } from "@/moss-context/navbar-context";
 
 export default function MobileNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentMenu, setCurrentMenu] = useState(null);
-  const [menuHistory, setMenuHistory] = useState([]);
+
+  const menuContext = useContext(MobileMenueContext);
+
+  const { isMenuOpen, currentMenu,  toggleMenu, handleNavItemClick, handleBack } = menuContext;
+
+
+  console.log(currentMenu);
+  
+
+
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [currentMenu, setCurrentMenu] = useState(null);
+  // const [menuHistory, setMenuHistory] = useState([]);
 
 //   const navItems = [
 //     {
@@ -38,26 +49,26 @@ export default function MobileNavbar() {
 //     },
 //   ];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (!isMenuOpen) {
-      setCurrentMenu(null);
-      setMenuHistory([]);
-    }
-  };
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  //   if (!isMenuOpen) {
+  //     setCurrentMenu(null);
+  //     setMenuHistory([]);
+  //   }
+  // };
 
-  const handleNavItemClick = (item) => {
-    if (item.content) {
-      setMenuHistory([...menuHistory, currentMenu]);
-      setCurrentMenu(item);
-    }
-  };
+  // const handleNavItemClick = (item) => {
+  //   if (item.content) {
+  //     setMenuHistory([...menuHistory, currentMenu]);
+  //     setCurrentMenu(item);
+  //   }
+  // };
 
-  const handleBack = () => {
-    const prevMenu = menuHistory.pop();
-    setCurrentMenu(prevMenu);
-    setMenuHistory([...menuHistory]);
-  };
+  // const handleBack = () => {
+  //   const prevMenu = menuHistory.pop();
+  //   setCurrentMenu(prevMenu);
+  //   setMenuHistory([...menuHistory]);
+  // };
 
     console.log(navItems);
     
@@ -110,6 +121,7 @@ export default function MobileNavbar() {
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } `}
         >
+          <p className={`${currentMenu? 'hidden' :'block'}`}>New menu!</p>
           <div className="h-full flex flex-col ">
             {/* Menu Header */}
             <div
@@ -145,7 +157,6 @@ export default function MobileNavbar() {
 
             {/* Menu Items */}
             <ul className="flex-1 overflow-y-auto small_screens:p-0 md_screens:p-0 p-4 space-y-2  ">
-              <p>New one</p>
               {currentMenu
                 ? currentMenu.content
                 : navItems.map((item) => (
