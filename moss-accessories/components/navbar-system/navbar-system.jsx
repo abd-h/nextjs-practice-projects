@@ -13,7 +13,7 @@ export default function NavbarSystem() {
 
 
   
-console.log(!navItems[0].hasOwnProperty("content"));
+
 
   // Handle panel visibility with delay
   useEffect(() => {

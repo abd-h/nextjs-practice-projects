@@ -1,53 +1,61 @@
-
-
 "use client";
 import { useContext } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { navItems } from "@/utitlities/navlink-content/navbar-item-data";
 import { MobileMenueContext } from "@/moss-context/navbar-context";
+import wishList from "@/assets/wish-list.png";
+import profileIcon from "@/assets/profile-icon-2.png";
+
+const mobileIcons = [
+  { name: "Profile Icon", image: profileIcon },
+  { name: "Wish List", image: wishList },
+];
 
 export default function MobileNavbar() {
-
   const menuContext = useContext(MobileMenueContext);
 
-  const { isMenuOpen, currentMenu,  toggleMenu, handleNavItemClick, handleBack } = menuContext;
-
+  const {
+    isMenuOpen,
+    currentMenu,
+    toggleMenu,
+    handleNavItemClick,
+    handleBack,
+  } = menuContext;
 
   console.log(currentMenu);
-  
-
 
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [currentMenu, setCurrentMenu] = useState(null);
   // const [menuHistory, setMenuHistory] = useState([]);
 
-//   const navItems = [
-//     {
-//       name: "Home",
-//       href: "/",
-//     },
-//     {
-//       name: "Products",
-//       subItems: [
-//         { name: "All Products", href: "/products" },
-//         {
-//           name: "Categories",
-//           subItems: [
-//             { name: "Electronics", href: "/categories/electronics" },
-//             { name: "Clothing", href: "/categories/clothing" },
-//           ],
-//         },
-//         { name: "Sale", href: "/sale" },
-//       ],
-//     },
-//     {
-//       name: "Services",
-//       subItems: [
-//         { name: "Consulting", href: "/consulting" },
-//         { name: "Training", href: "/training" },
-//       ],
-//     },
-//   ];
+  //   const navItems = [
+  //     {
+  //       name: "Home",
+  //       href: "/",
+  //     },
+  //     {
+  //       name: "Products",
+  //       subItems: [
+  //         { name: "All Products", href: "/products" },
+  //         {
+  //           name: "Categories",
+  //           subItems: [
+  //             { name: "Electronics", href: "/categories/electronics" },
+  //             { name: "Clothing", href: "/categories/clothing" },
+  //           ],
+  //         },
+  //         { name: "Sale", href: "/sale" },
+  //       ],
+  //     },
+  //     {
+  //       name: "Services",
+  //       subItems: [
+  //         { name: "Consulting", href: "/consulting" },
+  //         { name: "Training", href: "/training" },
+  //       ],
+  //     },
+  //   ];
 
   // const toggleMenu = () => {
   //   setIsMenuOpen(!isMenuOpen);
@@ -70,10 +78,7 @@ export default function MobileNavbar() {
   //   setMenuHistory([...menuHistory]);
   // };
 
-    console.log(navItems);
-    
 
-    
   return (
     <nav
       aria-label="Main navigation"
@@ -117,11 +122,36 @@ export default function MobileNavbar() {
 
         {/* Sliding Menu */}
         <div
-          className={`relative h-full w-1/2  bg-white transform transition-transform duration-300 ${
+          className={`relative h-full w-2/3  bg-white transform transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } `}
         >
-          <p className={`${currentMenu? 'hidden' :'block'}`}>New menu!</p>
+          {/*Top of the mobile menu icons*/}
+          <ul
+            className={`${
+              currentMenu
+                ? "hidden"
+                : "flex justify-between items-center py-2 px-4 border-b-[1px_solid_black] border-b-[1px]"
+            }`}
+          >
+            <li className=" py-6">
+              <Link href="/" className="hover:underline">
+                GP £
+              </Link>{" "}
+              ▼
+            </li>
+            <li className="flex gap-2">
+              {mobileIcons.map((icons) => (
+                <Link className="mx-2" href="/" key={icons.name}>
+                  <Image
+                    src={icons.image}
+                    className="h-6 w-6 md_screens:h-8 md_screens:w-8 small_screens:h-6 small_screens:w-6"
+                    alt="profile icon"
+                  />
+                </Link>
+              ))}
+            </li>
+          </ul>
           <div className="h-full flex flex-col ">
             {/* Menu Header */}
             <div
@@ -162,7 +192,7 @@ export default function MobileNavbar() {
                 : navItems.map((item) => (
                     // mobile main navlinks
                     <li
-                      className="first:mt-14  p-4 text-sm tracking-widest  border-b-[1px_solid_black] border-b-[1px]"
+                      className="  p-4 text-sm tracking-widest  border-b-[1px_solid_black] border-b-[1px]"
                       key={item.id}
                     >
                       {item.href ? (
@@ -210,10 +240,6 @@ export default function MobileNavbar() {
     </nav>
   );
 }
-
-
-
-
 
 // export default function ComplexNavbar() {
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -271,7 +297,7 @@ export default function MobileNavbar() {
 //           </svg>
 //         </button>
 //           </div>
-          
+
 //     </nav>
 //   );
 // }

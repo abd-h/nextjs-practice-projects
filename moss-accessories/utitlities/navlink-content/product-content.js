@@ -215,77 +215,77 @@ export function WeddingsContent() {
   );
 }
 
-export function ShirtsContent() {
-  return (
-    <div className="flex justify-evenly w-[80%]">
-      <div className=" flex flex-col items-start">
-        <h3 className="text-sm text-start font-semibold mb-4">Shirts</h3>
-        <ul className="space-y-3  flex flex-col items-start">
-          {shirts.formal.map((item, i) => (
-            <li key={i}>
-              <div className="group inline-block relative">
-                <Link href="#" className="group relative">
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+// export function ShirtsContent() {
+//   return (
+//     <div className="flex justify-evenly w-[80%]">
+//       <div className=" flex flex-col items-start">
+//         <h3 className="text-sm text-start font-semibold mb-4">Shirts</h3>
+//         <ul className="space-y-3  flex flex-col items-start">
+//           {shirts.formal.map((item, i) => (
+//             <li key={i}>
+//               <div className="group inline-block relative">
+//                 <Link href="#" className="group relative">
+//                   {item}
+//                   <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+//                 </Link>
+//               </div>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
 
-      <div className="flex flex-col items-start">
-        <h3 className="text-sm text-start font-semibold mb-4">Casual</h3>
-        <ul className="space-y-3  flex flex-col items-start">
-          {shirts.casual.map((item, i) => (
-            <li key={i}>
-              <div className="group inline-block relative">
-                <Link href="#" className="group relative">
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+//       <div className="flex flex-col items-start">
+//         <h3 className="text-sm text-start font-semibold mb-4">Casual</h3>
+//         <ul className="space-y-3  flex flex-col items-start">
+//           {shirts.casual.map((item, i) => (
+//             <li key={i}>
+//               <div className="group inline-block relative">
+//                 <Link href="#" className="group relative">
+//                   {item}
+//                   <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+//                 </Link>
+//               </div>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
 
-      <div className="flex flex-col items-start">
-        <h3 className="text-sm text-start font-semibold mb-4">
-          Shirts by colour
-        </h3>
-        <ul className="space-y-3  flex flex-col items-start">
-          {shirts.shirts_by_colour.map((item, i) => (
-            <li key={i}>
-              <div className="group inline-block relative">
-                <Link href="#" className="group relative">
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+//       <div className="flex flex-col items-start">
+//         <h3 className="text-sm text-start font-semibold mb-4">
+//           Shirts by colour
+//         </h3>
+//         <ul className="space-y-3  flex flex-col items-start">
+//           {shirts.shirts_by_colour.map((item, i) => (
+//             <li key={i}>
+//               <div className="group inline-block relative">
+//                 <Link href="#" className="group relative">
+//                   {item}
+//                   <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+//                 </Link>
+//               </div>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
 
-      <div className="flex flex-col items-start">
-        <h3 className="text-sm text-start font-semibold mb-4">Fit</h3>
-        <ul className="space-y-3  flex flex-col items-start">
-          {shirts.fit.map((item, i) => (
-            <li key={i}>
-              <div className="group inline-block relative">
-                <Link href="#" className="group relative">
-                  {item}
-                  <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
+//       <div className="flex flex-col items-start">
+//         <h3 className="text-sm text-start font-semibold mb-4">Fit</h3>
+//         <ul className="space-y-3  flex flex-col items-start">
+//           {shirts.fit.map((item, i) => (
+//             <li key={i}>
+//               <div className="group inline-block relative">
+//                 <Link href="#" className="group relative">
+//                   {item}
+//                   <span className="absolute left-1/2 bottom-0 w-0 h-[0.5px] bg-[#393939] transition-all duration-500 ease-out group-hover:w-full group-hover:left-0 top-[1rem]"></span>
+//                 </Link>
+//               </div>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// }
 
 export function TrousersContent() {
   return (

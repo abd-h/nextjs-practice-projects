@@ -159,97 +159,309 @@ export const suits = {
     },
   ],
   services: [
-    "Custom made",
-    "Hire appointments",
-    "Fabric samples",
-    "Gift cards",
+    {
+      id: "custom-made",
+      title: "Custom Made",
+      href: "/services/custom-made",
+    },
+    {
+      id: "hire",
+      title: "Hire",
+      href: "/services/hire",
+    },
+    {
+      id: "store-appointments",
+      title: "Store appointments",
+      href: "/services/store-appointments",
+    },
+    {
+      id: "fabric-samples",
+      title: "Fabric samples",
+      href: "/services/fabric-samples",
+    },
+    {
+      id: "gift-cards",
+      title: "Gift cards",
+      href: "/services/gift-cards",
+    },
   ],
 };
 
 export const weddings = {
   wedding_suits: [
-    "The wedding shop",
-    "Tweed suits",
-    "Black tie",
-    "Linen suits",
-    "Custom made suits",
-    "Morning suits",
-    "Boys' suits",
-    "Wedding guests",
+    {
+      id: "wedding-suits",
+      title: "Wedding Shop",
+      href: "/wedding-shop",
+    },
+    {
+      id: "tweed-suits",
+      title: "Tweed suits",
+      href: "/weddings/tweed-suits",
+    },
+    {
+      id: "black-tie",
+      title: "Black tie",
+      href: "/weddings/black-tie",
+    },
+    {
+      id: "linen-suits",
+      title: "Linen suits",
+      href: "/weddings/linen-suits",
+    },
+    {
+      id: "custom-made-suits",
+      title: "Custom made suits",
+      href: "/weddings/custom-made-suits",
+    },
+    {
+      id: "morning-suits",
+      title: "Morning suits",
+      href: "/weddings/morning-suits",
+    },
+    { id: "boys-suits", title: "Boys suits", href: "/weddings/morning-suits" },
+    {
+      id: "wedding-guests",
+      title: "Wedding guests",
+      href: "/weddings/wedding-guests",
+    },
   ],
   complete_the_look: [
-    "Wedding shirts",
-    "Wedding ties",
-    "Wedding shoes",
-    "Wedding accessories",
+    {
+      id: "wedding-shirts",
+      title: "Wedding shirts",
+      href: "/weddings/wedding-shirts",
+    },
+    {
+      id: "wedding-ties",
+      title: "Wedding ties",
+      href: "/weddings/wedding-ties",
+    },
+    {
+      id: "wedding-shoes",
+      title: "Wedding shoes",
+      href: "/weddings/wedding-shoes",
+    },
+    {
+      id: "wedding-accessories",
+      title: "Wedding accessories",
+      href: "/weddings/wedding-accessories",
+    },
   ],
   editorial: [
-    "Wedding look book",
-    "The wedding guide",
-    "The wedding planning timeline",
-    "Groom's outfit ideas",
-    "The suit fit guide",
-    "Style guide: black tie weddings",
+    {
+      id: "wedding-look-book",
+      title: "Wedding look book",
+      href: "/wedding-look-book",
+    },
+    {
+      id: "wedding-style-guide",
+      title: "Wedding style guide",
+      href: "/wedding-style-guide",
+    },
+    {
+      id: "wedding-planning-timeline",
+      title: "Wedding planning timeline",
+      href: "/wedding-planning-timeline",
+    },
+    {
+      id: "grooms-outfit-ideas",
+      title: "Groom's outfit ideas",
+      href: "/grooms-outfit-ideas",
+    },
+    { id: "suit-fit-guide", title: "Suit fit guide", href: "/suit-fit-guide" },
+    {
+      id: "black-tie-weddings",
+      title: "Black tie weddings",
+      href: "/black-tie-weddings",
+    },
   ],
+
   services: [
-    "Hire",
-    "Custom made",
-    "Store styling appointments",
-    "Fabric samples",
+    {
+      id: "hire",
+      title: "Hire",
+      href: "/hire",
+    },
+    {
+      id: "custom-made",
+      title: "Custom made",
+      href: "/custom-made",
+    },
+    {
+      id: "store-appointments",
+      title: "Store appointments",
+      href: "/store-appointments",
+    },
+    { id: "fabric-samples", title: "Fabric samples", href: "/fabric-samples" },
   ],
 };
 
 export const shirts = {
   formal: [
-    "Dress shirts",
-    "Non iron shirts",
-    "Stretch shirts",
-    "Double cuff shirts",
-    "Single cuff shirts",
+    { id: "dress-shirts", title: "Dress shirts", href: "/shirts/dress-shirts" },
+    {
+      id: "non-iron-shirts",
+      title: "Non iron shirts",
+      href: "/shirts/non-iron-shirts",
+    },
+    {
+      id: "stretch-shirts",
+      title: "Stretch shirts",
+      href: "/shirts/stretch-shirts",
+    },
+    {
+      id: "double-cuff-shirts",
+      title: "Double cuff shirts",
+      href: "/shirts/double-cuff-shirts",
+    },
+    {
+      id: "single-cuff-shirts",
+      title: "Single cuff shirts",
+      href: "/shirts/single-cuff-shirts",
+    },
   ],
   casual: [
-    "Linen shirts",
-    "Oxford shirts",
-    "Short sleeve shirts",
-    "Overshirts",
-    "Polo shirts",
-    "T-shirts",
+    { id: "linen-shirts", title: "Linen shirts", href: "/shirts/linen-shirts" },
+    {
+      id: "oxford-shirts",
+      title: "Oxford shirts",
+      href: "/shirts/oxford-shirts",
+    },
+    {
+      id: "short-sleeve-shirts",
+      title: "Short sleeve shirts",
+      href: "/shirts/short-sleeve-shirts",
+    },
+    { id: "overshirts", title: "Overshirts", href: "/shirts/overshirts" },
+    { id: "polo-shirts", title: "Polo shirts", href: "/shirts/polo-shirts" },
+    { id: "t-shirts", title: "T-shirts", href: "/shirts/t-shirts" },
   ],
+
   shirts_by_colour: [
-    "White shirts",
-    "Blue shirts",
-    "Pink shirts",
-    "Green shirts",
-    "Black shirts",
-    "Brown shirts",
+    { id: "white-shirts", title: "White shirts", href: "/shirts/white-shirts" },
+    {
+      id: "blue-shirts",
+      title: "Blue shirts",
+      href: "/shirts/blue-shirts",
+    },
+    {
+      id: "pink-shirts",
+      title: "Pink shirts",
+      href: "/shirts/pink-shirts",
+    },
+    {
+      id: "green-shirts",
+      title: "Green shirts",
+      href: "/shirts/green-shirts",
+    },
+    {
+      id: "black-shirts",
+      title: "Black shirts",
+      href: "/shirts/black-shirts",
+    },
+    {
+      id: "brown-shirts",
+      title: "Brown shirts",
+      href: "/shirts/brown-shirts",
+    },
   ],
+
   fit: [
-    "Slim fit shirts",
-    "Tailor fit shirts",
-    "Regular fit shirts",
-    "Big & tall shirts",
+    {
+      id: "slim-fit-shirts",
+      title: "Slim fit shirts",
+      href: "/shirts/slim-fit-shirts",
+    },
+    {
+      id: "tailor-fit-shirts",
+      title: "Tailor fit shirts",
+      href: "/shirts/tailor-fit-shirts",
+    },
+    {
+      id: "regular-fit-shirts",
+      title: "Regular fit shirts",
+      href: "/shirts/regular-fit-shirts",
+    },
+    {
+      id: "big-and-tall-shirts",
+      title: "Big & tall shirts",
+      href: "/shirts/big-and-tall-shirts",
+    },
   ],
 };
 
 export const trousers = {
   trousers: [
-    "Suit trousers",
-    "Smart trousers",
-    "Casual trousers",
-    "Linen trousers",
-    "Chinos",
-    "Custom trousers",
-    "Pleated trousers",
-    "Tuxedo trousers",
+    {
+      id: "suit-trousers",
+      title: "Suit trousers",
+      href: "/trousers/suit-trousers",
+    },
+    {
+      id: "smart-trousers",
+      title: "Smart trousers",
+      href: "/trousers/smart-trousers",
+    },
+    {
+      id: "casual-trousers",
+      title: "Casual trousers",
+      href: "/trousers/casual-trousers",
+    },
+    {
+      id: "linen-trousers",
+      title: "Linen trousers",
+      href: "/trousers/linen-trousers",
+    },
+    { id: "chinos", title: "Chinos", href: "/trousers/chinos" },
+    {
+      id: "custom-trousers",
+      title: "Custom trousers",
+      href: "/trousers/custom-trousers",
+    },
+    {
+      id: "pleated-trousers",
+      title: "Pleated trousers",
+      href: "/trousers/pleated-trousers",
+    },
+    {
+      id: "tuxedo-trousers",
+      title: "Tuxedo trousers",
+      href: "/trousers/tuxedo-trousers",
+    },
   ],
+
   trousers_by_colour: [
-    "Black trousers",
-    "Blue trousers",
-    "Grey trousers",
-    "Brown trousers",
-    "White trousers",
+    {
+      id: "black-trousers",
+      title: "Black trousers",
+      href: "/trousers/black-trousers",
+    },
+    {
+      id: "blue-trousers",
+      title: "Blue trousers",
+      href: "/trousers/blue-trousers",
+    },
+    {
+      id: "grey-trousers",
+      title: "Grey trousers",
+      href: "/trousers/grey-trousers",
+    },
+    {
+      id: "brown-trousers",
+      title: "Brown trousers",
+      href: "/trousers/brown-trousers",
+    },
+    {
+      id: "white-trousers",
+      title: "White trousers",
+      href: "/trousers/white-trousers",
+    },
   ],
-  shorts: ["Swim shorts", "The holiday shop"],
+  shorts: [
+    { id: 'swim-shorts', title: 'Swim shorts', href: '/trousers/swim-shorts' },
+    {id: 'the-holiday-shop', title: 'The holiday shop', href: '/trousers/the-holiday-shop'},
+  ],
 };
 
 export const shoes_and_accessories = {

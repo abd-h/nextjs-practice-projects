@@ -14,10 +14,10 @@ export default function Footer() {
     <footer className="w-full bg-[#28252a] text-white">
       <FooterNavLinks />
       {/** Social media links */}
-      <section className="h-[400px] border-y border-y-[#777777] mt-12 flex items-center justify-center  relative">
-        <div className="w-1/2 justify-center ">
+      <section className=" small_screens:my-4 small_screens:flex-col small_screens:gap-4  border-y border-y-[#777777] mt-12 flex items-center justify-center  relative ">
+        <div className=" small_screens:w-full w-1/2 justify-center small_screens:py-8">
           {" "}
-          <form>
+          <form className="">
             <p className="py-4 flex flex-col w-[70%] m-auto relative">
               <label className="text-sm tracking-wider py-4" htmlFor="email">
                 Signup today to get the latest news and be the first to hear
@@ -37,9 +37,11 @@ export default function Footer() {
               </button>
             </p>
           </form>
-          <div className="w-1/2 flex justify-center gap-2">
+          <div className="w-1/2 relative flex small_screens:w-full justify-center gap-2">
             <div
-              className=" flex justify-start ml-[-10px] my-4  items-center gap-2
+              className=" flex justify-start ml-[-10px] small_screens:absolute small_screens:left-[30%]
+              small_screens:mb-2
+              small_screens:my-0 my-4  items-center gap-2
             "
             >
               <Link className="hover:animate-bounce" href="">
@@ -80,23 +82,21 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="h-full border-r border-r-[#777777]"></div>
-        <div className="justify-self-center w-1/2">
-          <div className=" flex flex-col w-1/2 items-start justify-start m-auto">
-            <Link href="/">
+        <div className="h-full border-r border-r-[#777777] small_screens:border-b small_screens:border-b-[#777777]  small_screens:w-full small_screens:my-4"></div>
+        <div className=" flex small_screens:w-full  justify-self-center border-l border-l-[#777777] w-1/2 h-[400px]">
+          <div className=" flex flex-col w-1/2 items-center justify-start m-auto  small_screens:mx-auto small_screens:justify-center  small_screens:my-4">
+            <Link href="/" className=' self-start'>
               <Image
-                className=""
+                className="max-h-[auto] w-[158px] h-[83px]"
                 src={prostateCancerLogo}
                 alt="Prostate cancer logo"
-                width="158"
-                height="83"
               />
             </Link>
-            <p className="text-[0.85rem] tracking-wider leading-7">
+            <p className="text-[0.85rem] tracking-wider leading-7 self-start">
               Most men with early prostate cancer don't have any syptoms. check
               your risk in 30 seconds
             </p>
-            <Link className="my-4" href="/">
+            <Link className="self-start my-4 text-left" href="/">
               <button className="text-sm font-bold first-letter:uppercase underline ws-wide tracking-widest">
                 check your risk
               </button>

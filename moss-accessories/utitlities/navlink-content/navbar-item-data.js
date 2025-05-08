@@ -1,14 +1,17 @@
  
  import {
   CustomMadeContent,
-  ShirtsContent,
   ShoesAndAccessoriesContent,
-  TrousersContent,
+  
   
 } from "@/utitlities/navlink-content/product-content";
 import SuitsContent from "../product-data/suit-content";
 
 import WeddingsContent from "../product-data/wedding-suits-content";
+
+import ShirtsContent from "../product-data/shirt-content";
+
+import TrousersContent from "../product-data/trounsers-content";
 
  export const navItems = [
    { id: "suits", title: "Suits", content: <SuitsContent /> },
