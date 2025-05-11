@@ -1,10 +1,10 @@
  
- import {
-  CustomMadeContent,
-  ShoesAndAccessoriesContent,
+//  import {
+//   CustomMadeContent,
+//   // ShoesAndAccessoriesContent,
   
   
-} from "@/utitlities/navlink-content/product-content";
+// } from "@/utitlities/navlink-content/product-content";
 import SuitsContent from "../product-data/suit-content";
 
 import WeddingsContent from "../product-data/wedding-suits-content";
@@ -12,8 +12,11 @@ import WeddingsContent from "../product-data/wedding-suits-content";
 import ShirtsContent from "../product-data/shirt-content";
 
 import TrousersContent from "../product-data/trounsers-content";
+import ShoesAndAccessoriesContent from "../product-data/shoes-and-accessories";
 
- export const navItems = [
+import CustomMadeContent from "../product-data/custome_made_content";
+
+export const navItems = [
    { id: "suits", title: "Suits", content: <SuitsContent /> },
    { id: "weddings", title: "Weddings", content: <WeddingsContent /> },
    { id: "shirts", title: "Shirts", content: ShirtsContent() },

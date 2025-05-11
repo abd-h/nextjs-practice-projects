@@ -459,49 +459,119 @@ export const trousers = {
     },
   ],
   shorts: [
-    { id: 'swim-shorts', title: 'Swim shorts', href: '/trousers/swim-shorts' },
-    {id: 'the-holiday-shop', title: 'The holiday shop', href: '/trousers/the-holiday-shop'},
+    { id: "swim-shorts", title: "Swim shorts", href: "/trousers/swim-shorts" },
+    {
+      id: "the-holiday-shop",
+      title: "The holiday shop",
+      href: "/trousers/the-holiday-shop",
+    },
   ],
 };
 
 export const shoes_and_accessories = {
   shoes: [
-    "Formal shoes",
-    "Dress shoes",
-    "Loafers",
-    "Trainers",
-    "Brogues",
-    "Casual shoes",
+    { id: "formal-shoes", title: "Formal shoes", href: "/shoes/formal-shoes" },
+    { id: "dress-shoes", title: "Dress shoes", href: "/shoes/dress-shoes" },
+    { id: "loafers", title: "Loafers", href: "/shoes/loafers" },
+    { id: "trainers", title: "Trainers", href: "/shoes/trainers" },
+    { id: "brogues", title: "Brogues", href: "/shoes/brogues" },
+    { id: "casual-shoes", title: "Casual shoes", href: "/shoes/casual-shoes" },
   ],
+
   accessories: [
-    "Ties",
-    "Bow ties",
-    "Pocket square",
-    "Cufflinks",
-    "Belts",
-    "Socks",
-    "Sunglasses",
-    "Hats & caps",
-    "Bags & luggage",
-    "Skin care & fragrance",
+    { id: "ties", title: "Ties", href: "/accessories/ties" },
+    { id: "bow-ties", title: "Bow ties", href: "/accessories/bow-ties" },
+    {
+      id: "pocket-square",
+      title: "Pocket square",
+      href: "/accessories/pocket-square",
+    },
+    { id: "cufflinks", title: "Cufflinks", href: "/accessories/cufflinks" },
+    { id: "belts", title: "Belts", href: "/accessories/belts" },
+    { id: "socks", title: "Socks", href: "/accessories/socks" },
+    { id: "sunglasses", title: "Sunglasses", href: "/accessories/sunglasses" },
+    {
+      id: "hats-and-caps",
+      title: "Hats & caps",
+      href: "/accessories/hats-and-caps",
+    },
+    {
+      id: "bags-and-luggage",
+      title: "Bags & luggage",
+      href: "/accessories/bags-and-luggage",
+    },
+    {
+      id: "skin-care-and-fragrance",
+      title: "Skin care & fragrance",
+      href: "/accessories/skin-care-and-fragrance",
+    },
   ],
 };
 
 export const custom_made = {
   custom_made: [
-    "Custom made suits",
-    "Custom made wedding suits",
-    "Custom made tuxedos",
-    "Custom made jackets",
-    "Fabric samples",
-    "Store appointments",
+    {
+      id: "custom-made-suits",
+      title: "Custom made suits",
+      href: "/custom-made/custom-made-suits",
+    },
+    {
+      id: "custome-made-wedding-suits",
+      title: "Custom made wedding suits",
+      href: "/custom-made/custom-made-wedding-suits",
+    },
+    {
+      id: "custom-made-tuxedos",
+      title: "Custom made tuxedos",
+      href: "/custom-made/custom-made-tuxedos",
+    },
+    {
+      id: "custom-made-jackets",
+      title: "Custom made jackets",
+      href: "/custom-made/custom-made-jackets",
+    },
+    {
+      id: "fabric-samples",
+      title: "Fabric samples",
+      href: "/custom-made/fabric-samples",
+    },
+    {
+      id: "store-appointments",
+      title: "Store appointments",
+      href: "/custom-made/store-appointments",
+    },
   ],
+
   design_it_now: [
-    "Three peice suit",
-    "Two piece suit",
-    "Jacket",
-    "Trousers",
-    "Tuxedo",
-    "Dinner jacket",
+    {
+      id: "three-piece-suit",
+      title: "Three piece suit",
+      href: "/custom-made/three-piece-suit",
+    },
+    {
+      id: "two-piece-suit",
+      title: "Two piece suit",
+      href: "/custom-made/two-piece-suit",
+    },
+    {
+      id: "jacket",
+      title: "Jacket",
+      href: "/custom-made/jacket"
+    },
+    {
+      id: "trousers",
+      title: "Trousers",
+      href: "/custom-made/trousers"
+    },
+    {
+      id: "tuxedo",
+      title: "Tuxedo",
+      href: "/custom-made/tuxedo"
+    },
+    {
+      id: "dinner-jacket",
+      title: "Dinner jacket",
+      href: "/custom-made/dinner-jacket",
+    },
   ],
 };

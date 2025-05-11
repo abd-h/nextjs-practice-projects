@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { shirts } from "../navlink-content/navbar-sublinks-data";
 import ProductNavLinks from "./product-navlinks";
+import ProductNavLinksLargeScreens from "./product-navlinks-large-screens";
 
 export default function ShirtsContent() {
   return (
@@ -8,7 +9,12 @@ export default function ShirtsContent() {
       {/* For larger screens */}
       <div
         className={`small_screens:hidden md_screens:hidden flex  mx-auto w-[80%]  justify-evenly`}
-      ></div>
+      >
+      <ProductNavLinksLargeScreens title='Formal' items={shirts.formal} />
+      <ProductNavLinksLargeScreens title='Casual shirts' items={shirts.casual} />
+      <ProductNavLinksLargeScreens title='Shirts by colour' items={shirts.shirts_by_colour} />
+      <ProductNavLinksLargeScreens title='Fit' items={shirts.fit} /> 
+      </div>
 
       {/* For smaller screens */}
       <div
