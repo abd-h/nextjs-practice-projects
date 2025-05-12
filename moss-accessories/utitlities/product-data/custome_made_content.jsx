@@ -7,12 +7,30 @@ import ProductNavLinksLargeScreens from "./product-navlinks-large-screens";
 import Image from "next/image";
 
 import shoesHeroBannerImage from "@/assets/images/shoes/navbar_hero_banner.webp";
+
+import tiesHeroBannerImage from "@/assets/images/ties/navbar_ties_hero_banner.png";
+import NavbarImageBanner from "@/components/navbar-system/navbar-image-banner";
+
+// This component is used to display the custom made content on the page
+// It uses the ProductNavLinks component to display the links for custom made and design it now
+// It also uses the ProductNavLinksLargeScreens component to display the links for larger screens
+// It uses the custom_made data from the navbar-sublinks-data file to get the links for custom made and design it now
+// It uses the shoesHeroBannerImage from the assets folder to display the image for custom made and design it now
+// It uses the Image component from next/image to display the image
+// It uses the Link component from next/link to create links for custom made and design it now
+// It uses the custom_made data from the navbar-sublinks-data file to get the links for custom made and design it now
+// It uses the shoesHeroBannerImage from the assets folder to display the image for custom made and design it now
 export default function CustomMadeContent() {
+
+  const navbarImageBanner = [
+    {id: 'shoes-banner', image:shoesHeroBannerImage, figcaption: "Custom made shoes"},
+    {id: 'ties-banner',  image: tiesHeroBannerImage, figcaption: "Custom made ties"},
+  ]
   return (
     <>
       {/* For larger screens */}
       <div
-        className={`small_screens:hidden md_screens:hidden flex  mx-auto w-[100%]  justify-evenly bg-[#857777ce]`}
+        className={`small_screens:hidden md_screens:hidden flex  mx-auto w-[100%]  h-full justify-evenly  `}
       >
         <div className=" flex items-center justify-around w-1/2 ">
           {" "}
@@ -25,26 +43,11 @@ export default function CustomMadeContent() {
             items={custom_made.design_it_now}
           />
         </div>
-        <div
-          className={` w-1/2  flex items-start bg-[#857777ce] !important `}
-          style={{ backgroundColor: "#857777ce" }}
-        >
-          <div className="w-full flex items-center justify-around gap-4">
-            <Image
-              src={shoesHeroBannerImage}
-              alt="testImage"
-              width="200"
-              height="200"
-            />
-            <Image
-              src={shoesHeroBannerImage}
-              alt="testImage"
-              width="200"
-              height="200"
-            />
-          </div>
+      
+          <NavbarImageBanner imageBanner={ navbarImageBanner} />
+         
         </div>
-      </div>
+      
 
       {/* For smaller screens */}
       <div
