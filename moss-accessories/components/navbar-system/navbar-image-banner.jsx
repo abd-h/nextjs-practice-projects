@@ -7,10 +7,10 @@ export default function NavbarImageBanner({imageBanner}) {
 
     return (
           <div
-          className={` w-1/2  flex items-start!important   justify-center rounded-lg py-4 bg-[#5e5050]` }
+          className={` w-1/2  flex items-start!important   justify-center py-12 bg-[#5e5050]` }
         
         >
-      <ul className="w-full flex items-center justify-around gap-4 m-auto p-4">
+      <ul className="w-full flex items-center justify-around m-auto p-4">
         {imageBanner.map((item) => (
           <li
             key={item.id}

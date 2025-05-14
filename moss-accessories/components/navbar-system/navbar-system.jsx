@@ -68,7 +68,7 @@ export default function NavbarSystem() {
             key={item.id}
             className={`transition-opacity duration-0 ${
               activeContent === item.id ? "opacity-100" : "opacity-0 absolute"
-            }  w-full py-4 px-2`}
+            }  w-full`}
           >
             {item.content}
           </div>
