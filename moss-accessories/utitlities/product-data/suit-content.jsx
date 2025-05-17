@@ -16,19 +16,24 @@ export default function SuitsContent() {
     <>
       {/* For larger screens */}
       <div
-        className={`small_screens:hidden md_screens:hidden flex  mx-auto w-[80%]  justify-evenly`}
+        className={`small_screens:hidden md_screens:hidden flex  mx-auto w-[90%]  justify-evenly`}
       >
-        <ProductNavLinksLargeScreens items={suits.style} title="Style" />
-        <ProductNavLinksLargeScreens
-          items={suits.occassions}
-          title="Occasions"
-        />
-        <ProductNavLinksLargeScreens
-          items={suits.suits_by_colour}
-          title="Suits by color"
-        />
-        <ProductNavLinksLargeScreens items={suits.jackets} title="Jackets" />
-        <ProductNavLinksLargeScreens items={suits.services} title="Services" />
+        <div className='py-12  flex w-full justify-evenly items-start'>
+          <ProductNavLinksLargeScreens items={suits.style} title="Style" />
+          <ProductNavLinksLargeScreens
+            items={suits.occassions}
+            title="Occasions"
+          />
+          <ProductNavLinksLargeScreens
+            items={suits.suits_by_colour}
+            title="Suits by color"
+          />
+          <ProductNavLinksLargeScreens items={suits.jackets} title="Jackets" />
+          <ProductNavLinksLargeScreens
+            items={suits.services}
+            title="Services"
+          />
+        </div>
       </div>
 
       {/* For smaller screens */}

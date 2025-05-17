@@ -9,7 +9,7 @@ import NavbarImageBanner from "@/components/navbar-system/navbar-image-banner";
 import shoesHeroBanner from "@/assets/images/hero-banner-images/shoes_navbar_hero_banner.webp";
 
 import tiesHeroBanner from "@/assets/images/hero-banner-images/ties_navlink_banner.png";
-import  {navbarImagesBanner}  from "@/lib/navbar_image_banner";  
+import  {imgBanner, navbarImagesBanner}  from "@/lib/navbar_image_banner";  
 
 export default function ShoesAndAccessoriesContent() {
   // This component is used to display the shoes and accessories content on the page
@@ -21,6 +21,8 @@ export default function ShoesAndAccessoriesContent() {
   ];
   
   console.log('fig caption'.replace(/\s/g, "-"));
+  
+
   
 
   return (

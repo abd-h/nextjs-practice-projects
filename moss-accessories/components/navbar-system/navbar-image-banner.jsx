@@ -2,12 +2,12 @@
 import Image from "next/image";
 
 export default function NavbarImageBanner({imageBanner}) {
-    console.log(imageBanner);
+    console.log(imageBanner.length === 1);
     
 
     return (
           <div
-          className={` w-1/2  flex items-start!important   justify-center py-12 bg-[#5e5050]` }
+          className={`${imageBanner.length === 1? 'w-[30%]' : 'w-1/2'}  flex items-start!important   justify-center py-12 bg-[#666262]` }
         
         >
       <ul className="w-full flex items-center justify-around m-auto p-4">
@@ -20,9 +20,7 @@ export default function NavbarImageBanner({imageBanner}) {
               <Image
                 src={item.image}
                 alt={item.figcaption}
-                
-                width={300}
-                height={300 }
+                className={`h-[200px] w-[200px]`}
               />
               <figcaption className="text-sm font-semibold text-white text-left p-2">
                 {item.figcaption}
