@@ -17,8 +17,7 @@ export default async function Home() {
   
   return (
     <MobileMenueProvider> 
-      <PopupOffer />
-      <MainHeader />
+     
       <main className="max-w-[98%] m-auto">
         <ProductLandingPage />
       </main>

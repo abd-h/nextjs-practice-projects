@@ -23,7 +23,7 @@ export default function MobileNavbar() {
     handleBack,
   } = menuContext;
 
-  console.log(currentMenu);
+  console.log(navItems.map((item) => item.href));
 
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [currentMenu, setCurrentMenu] = useState(null);
@@ -77,7 +77,6 @@ export default function MobileNavbar() {
   //   setCurrentMenu(prevMenu);
   //   setMenuHistory([...menuHistory]);
   // };
-
 
   return (
     <nav
@@ -166,7 +165,7 @@ export default function MobileNavbar() {
                   aria-label="Go back to previous menu"
                 >
                   <svg
-                    className="outline h-8 w-6"
+                    className="ml-5 h-12 w-8"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -195,25 +194,52 @@ export default function MobileNavbar() {
                       className="  p-4 text-sm tracking-widest  border-b-[1px_solid_black] border-b-[1px]"
                       key={item.id}
                     >
-                      {item.href ? (
-                        <Link
-                          href={item.href}
-                          className={`block p-8 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none `}
-                          onClick={toggleMenu}
-                          tabIndex={isMenuOpen ? 0 : -1}
-                        >
-                          {item.title}
-                        </Link>
+                      {!isMenuOpen ? (
+                        <div>
+                          <Link
+                            href={item.href}
+                            className={`  block p-8 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none `}
+                            onClick={toggleMenu}
+                            tabIndex={isMenuOpen ? 0 : -1}
+                          >
+                            {item.title}
+                          </Link>
+                          <button
+                            onClick={() => handleNavItemClick(item)}
+                            className=" w-full text-left p-2 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                            aria-expanded={!!item.subItems}
+                            tabIndex={isMenuOpen ? 0 : -1}
+                          >
+                            <div className="flex justify-between items-center  ml-4">
+                              {item.title}
+                              {item.subItems && (
+                                <svg
+                                  className="h-5 w-5 "
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                  />
+                                </svg>
+                              )}
+                            </div>
+                          </button>
+                        </div>
                       ) : (
                         <button
                           onClick={() => handleNavItemClick(item)}
-                          className=" w-full text-left p-2 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                          className=" block text-center w-full p-8 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                           aria-expanded={!!item.subItems}
                           tabIndex={isMenuOpen ? 0 : -1}
                         >
-                          <div className="flex justify-between items-center  ml-4">
+                          <div className=" flex text-center justify-between items-center  ml-4">
                             {item.title}
-                            {item.subItems && (
+                           {item.subItems && (
                               <svg
                                 className="h-5 w-5 "
                                 fill="none"
@@ -227,6 +253,7 @@ export default function MobileNavbar() {
                                   d="M9 5l7 7-7 7"
                                 />
                               </svg>
+                             
                             )}
                           </div>
                         </button>

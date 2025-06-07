@@ -50,7 +50,7 @@ export const suits = {
     {
       id: "wedding-party",
       title: "Wedding party",
-      href: "/occassions/wedding-party",
+      href: "/weddings/wedding-party",
     },
     {
       id: "wedding-guest",
@@ -192,7 +192,7 @@ export const weddings = {
     {
       id: "wedding-suits",
       title: "Wedding Shop",
-      href: "/wedding-shop",
+      href: "/weddings/wedding-shop",
     },
     {
       id: "tweed-suits",
@@ -252,28 +252,32 @@ export const weddings = {
     {
       id: "wedding-look-book",
       title: "Wedding look book",
-      href: "/wedding-look-book",
+      href: "/weddings/wedding-look-book",
     },
     {
       id: "wedding-style-guide",
       title: "Wedding style guide",
-      href: "/wedding-style-guide",
+      href: "/weddings/wedding-style-guide",
     },
     {
       id: "wedding-planning-timeline",
       title: "Wedding planning timeline",
-      href: "/wedding-planning-timeline",
+      href: "/weddings/wedding-planning-timeline",
     },
     {
       id: "grooms-outfit-ideas",
       title: "Groom's outfit ideas",
-      href: "/grooms-outfit-ideas",
+      href: "/weddings/grooms-outfit-ideas",
     },
-    { id: "suit-fit-guide", title: "Suit fit guide", href: "/suit-fit-guide" },
+    {
+      id: "suit-fit-guide",
+      title: "Suit fit guide",
+      href: "/weddings/suit-fit-guide",
+    },
     {
       id: "black-tie-weddings",
       title: "Black tie weddings",
-      href: "/black-tie-weddings",
+      href: "/weddings/black-tie-weddings",
     },
   ],
 
@@ -293,7 +297,7 @@ export const weddings = {
       title: "Store appointments",
       href: "/store-appointments",
     },
-    { id: "fabric-samples", title: "Fabric samples", href: "/fabric-samples" },
+    { id: "fabric-samples", title: "Fabric samples", href: "/custom-made/fabric-samples" },
   ],
 };
 

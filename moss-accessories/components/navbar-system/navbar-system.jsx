@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 import ComplexNavbar from "./mobile-navbar";
 import { navItems } from "@/utitlities/navlink-content/navbar-item-data";
+import Link from "next/link";
 
 export default function NavbarSystem() {
   const [activeContent, setActiveContent] = useState(null);
@@ -13,7 +14,8 @@ export default function NavbarSystem() {
 
 
   
-
+ 
+  
 
   // Handle panel visibility with delay
   useEffect(() => {
@@ -51,7 +53,7 @@ export default function NavbarSystem() {
             // className="relative"
           >
             <li className="text-grey-600 hover:text-blue-600 transition-colors p-2 text-sm">
-              {item.title}{" "}
+              <Link href={`${item.href? item.href : '#'}`}>{item.title} </Link>
             </li>
           </ul>
         ))}
@@ -74,7 +76,6 @@ export default function NavbarSystem() {
           </div>
         ))}
       </div>
-      
     </div>
   );
 }

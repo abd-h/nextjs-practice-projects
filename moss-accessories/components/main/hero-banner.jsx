@@ -7,7 +7,7 @@ export default function HeroBanner() {
   return (
     <div>
       <div className="hidden w-full larger_screens:block overflow-hidden mb-6 md_screens:mb-0">
-        <Link href="/about">
+        <Link href="/ties">
           <section className=" relative h-[630px] w-full m-auto bg-[url(@/assets/hero_banner.webp)] larger_screens:bg-contain bg-no-repeat sm_screens:bg-contain md_screens:h-[430px] md_screens:mb-0  mb-4">
             <div className="absolute top-[30%] md_screens:top-[10%] left-[19%]">
               <h2 className="font-[900] text-white text-6xl  md_screens:text-4xl my-4">
@@ -22,7 +22,7 @@ export default function HeroBanner() {
         </Link>
       </div>
       <div className="hidden small_screens:block overflow-hidden mb-6">
-        <Link href="/about">
+        <Link href="/ties">
           <section className=" relative h-[430px] w-full m-auto bg-[url(@/assets/hero_mobile-min.jpg)] bg-no-repeat bg-cover outline">
             <div className="absolute small_screens:top-[35%]  left-[19%] ">
               <h2 className="font-[900] text-white larger_screens:text-6xl small_screens:text-3xl my-4">

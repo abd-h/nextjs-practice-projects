@@ -17,14 +17,15 @@ import ShoesAndAccessoriesContent from "../product-data/shoes-and-accessories";
 import CustomMadeContent from "../product-data/custome_made_content";
 
 export const navItems = [
-   { id: "suits", title: "Suits", content: <SuitsContent /> },
-   { id: "weddings", title: "Weddings", content: <WeddingsContent /> },
-   { id: "shirts", title: "Shirts", content: ShirtsContent() },
-   { id: "trousers", title: "Trousers", content: TrousersContent() },
+   { id: "suits", title: "Suits", content: <SuitsContent />, href:'#' },
+   { id: "weddings", title: "Weddings", content: <WeddingsContent />, href:'/weddings' },
+   { id: "shirts", title: "Shirts", content: <ShirtsContent />, href:'/shirts' },
+   { id: "trousers", title: "Trousers", content: <TrousersContent />, href:'/trousers' }, 
    {
      id: "shoes_and_accessories",
      title: "Shoes & accessories",
-     content: ShoesAndAccessoriesContent(),
+     content: <ShoesAndAccessoriesContent />,
+     href:'/shoes-and-accessories'
    },
-   { id: "custom_made", title: "Custom Made", content: CustomMadeContent() },
+   { id: "custom_made", title: "Custom Made", content: <CustomMadeContent />, href:'/custom-made' },
  ];
