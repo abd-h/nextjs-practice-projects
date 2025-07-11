@@ -8,10 +8,13 @@ import instagramIcon from "@/assets/instagram_icon.png";
 import pinterestIcon from "@/assets/pinterest_icon.png";
 import prostateCancerLogo from "@/assets/prostatecancerlogo.webp";
 import FooterNavLinks from "./footer-navLinks";
+import FooterEditorialCarousel from "./footer-editorial-carousel";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-[#28252a] text-white">
+      {/** Footer editorial carousel */ }
+      <FooterEditorialCarousel />
       <FooterNavLinks />
       {/** Social media links */}
       <section className=" small_screens:my-4 small_screens:flex-col small_screens:gap-4  border-y border-y-[#777777] mt-12 flex items-center justify-center  relative ">

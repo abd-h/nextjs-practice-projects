@@ -22,8 +22,14 @@ export default function MobileNavbar() {
     handleNavItemClick,
     handleBack,
   } = menuContext;
-
-  console.log(navItems.map((item) => item.href));
+  const handleSubItemClick = () => {
+    // This function is called when a sub-item is clicked
+    if (currentMenu) {
+      handleBack();
+    } else {
+      toggleMenu();
+    }
+  };
 
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const [currentMenu, setCurrentMenu] = useState(null);
@@ -198,14 +204,17 @@ export default function MobileNavbar() {
                         <div>
                           <Link
                             href={item.href}
-                            className={`  block p-8 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none `}
-                            onClick={toggleMenu}
+                            className={`  outline block p-8 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none `}
+                            onClick={handleSubItemClick}
                             tabIndex={isMenuOpen ? 0 : -1}
                           >
                             {item.title}
                           </Link>
                           <button
-                            onClick={() => handleNavItemClick(item)}
+                            onClick={() => {
+                              handleNavItemClick(item);
+                              handleSubItemClick();
+                            }}
                             className=" w-full text-left p-2 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                             aria-expanded={!!item.subItems}
                             tabIndex={isMenuOpen ? 0 : -1}
@@ -232,6 +241,7 @@ export default function MobileNavbar() {
                         </div>
                       ) : (
                         <button
+                          type="submit"
                           onClick={() => handleNavItemClick(item)}
                           className=" block text-center w-full p-8 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                           aria-expanded={!!item.subItems}
@@ -239,7 +249,7 @@ export default function MobileNavbar() {
                         >
                           <div className=" flex text-center justify-between items-center  ml-4">
                             {item.title}
-                           {item.subItems && (
+                            {item.subItems && (
                               <svg
                                 className="h-5 w-5 "
                                 fill="none"
@@ -253,7 +263,6 @@ export default function MobileNavbar() {
                                   d="M9 5l7 7-7 7"
                                 />
                               </svg>
-                             
                             )}
                           </div>
                         </button>

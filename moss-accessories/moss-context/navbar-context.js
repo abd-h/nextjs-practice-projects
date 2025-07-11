@@ -23,7 +23,9 @@ export function MobileMenueProvider({children}) {
         if (item.content) {
             setMenuHistory([...menuHistory, currentMenu]);
             setCurrentMenu(item)
+            
         }
+        
     };
 
     const handleBack = () => {
