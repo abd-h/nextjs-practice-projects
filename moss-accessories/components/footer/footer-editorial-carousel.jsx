@@ -49,10 +49,11 @@ console.log('hoverIndex', hoverIndex);
   // This component displays a carousel of editorial items in the footer.
 
   return (
-    <section className="w-full flex h-full">
-      <section className="outline w-1/2 p-16">
-        <h2 className="uppercase font-extrabold text-sm">on form since 1851</h2>{" "}
-        <p className="py-4 text-lg font-light tracking-wide h-2">
+    <section className="w-full border-b-2 border-b-[#777777] flex h-full">
+      <section className="border-r-2 border-r-[#777777] w-1/2 p-12">
+        <h2 className="uppercase font-[600] text-2xl">on form since 1851</h2>{" "}
+      
+        <p className="py-8 leading-8  text-lg font-light tracking-wide ">
           For big days and everydays, for life’s milestones and more minor
           moments – it all matters, and it’s all worthy of a great outfit. With
           over 170 years around the (tailoring) block and a collection of modern
@@ -62,7 +63,7 @@ console.log('hoverIndex', hoverIndex);
         </p>
       </section>
 
-      <section className=" outline w-1/2 flex  justify-center ">
+      <section className=" w-1/2 flex  justify-center ">
         {/** Desktop */}
         <article className=" flex flex-col p-16 space-y-12 ">
           <h2 className="text-2xl font-thin uppercase tracking-widest">
@@ -75,8 +76,10 @@ console.log('hoverIndex', hoverIndex);
               tabIndex="0"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
-              className={`relative group cursor-pointer outline-none border-b-2 border-[#636363] pb-4
-                  ${activeIndex === index ? "text-white" : "text-gray-400 "}`}
+              className={`relative group cursor-pointer outline-none pb-4
+                  ${activeIndex === index ? "text-white" : "text-gray-400 "} ${
+                index < 2 ? "border-b-2 border-[#636363]" : "border-b-0"
+              } `}
             >
               <span className={`py-4 w-full text-2xl `}>{item.title}</span>
               <span className="absolute left-full top-1/2 -translate-y-1/2 pl-4">
