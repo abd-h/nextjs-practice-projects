@@ -49,7 +49,7 @@ console.log('hoverIndex', hoverIndex);
   // This component displays a carousel of editorial items in the footer.
 
   return (
-    <section className="w-full border-b-2 border-b-[#777777] flex h-full">
+    <section className="small_screens:hidden w-full border-b-2 border-b-[#777777] flex h-full">
       <section className="border-r-2 border-r-[#777777] w-1/2 p-12">
         <h2 className="uppercase font-[600] text-2xl">on form since 1851</h2>{" "}
       
