@@ -1,4 +1,4 @@
-import FilterCategory from '@components/accessories/filter-category';
+import FilterCategory from "./filter-categories";
 
 export default function FilterSidebar({ isOpen, onClose }) {
   // Example filter options - in a real app, these might com from props or an API
@@ -71,7 +71,7 @@ export default function FilterSidebar({ isOpen, onClose }) {
           </div>
           <div className="p-4">
               {
-                  filterCategories.map((category) => < FilterCategory key={ category.id } name={ category.name } option={category.options} /> )
+                  filterCategories.map((category) => <FilterCategory key={ category.id } name={ category.name } options={category.options} /> )
           }
           </div>
     </div>

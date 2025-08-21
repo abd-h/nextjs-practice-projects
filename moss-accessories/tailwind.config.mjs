@@ -25,13 +25,12 @@ export default {
         underline: "underline 0.5s ease-out forwards",
       },
       screens: {
-        small_screens: { 'raw': '(max-width:800px)' },
-         md_screens: {
-          'raw': '(min-width: 801px) and (max-width: 1000px) '
+        small_screens: { raw: "(max-width:800px)" },
+        md_screens: {
+          raw: "(min-width: 801px) and (max-width: 1000px) ",
         },
-        larger_screens: { 'raw': '(min-width: 1001px) ' }, 
-       
-      }
+        larger_screens: { raw: "(min-width: 1001px) " },
+      },
 
       // wordSpacing: {
       //   tight: '0.125rem',
@@ -56,8 +55,9 @@ export default {
 
       addUtilities(newUtilities, ["responsive"]);
     }),
-    
   ],
-
+  plugins: [
+    require("@tailwindcss/forms"), // Add this line
+  ],
 };
 

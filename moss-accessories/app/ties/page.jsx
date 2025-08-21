@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Accessories from "../../components/accessories/accessories";
+// This is a dummy data array for demonstration purposes
 
 const dummyTies = [
   { id: 1, title: "Spotty Ties", price: 19.99, href: "/ties/spotty-ties" },
@@ -41,15 +43,7 @@ export default function TiesPage() {
         </p>
       </section>
       <section className="flex p-4">
-        <nav>
-          <ul className='flex gap-8 text-[0.95rem] leading-4 font-thin underline p-4 '>
-            {dummyTies.map((ties) => (
-              <Link href={ties.href} key={ties.id}>
-                <li className='tracking-widest'>{ties.title} </li>
-              </Link>
-            ))}
-          </ul>
-        </nav>
+        <Accessories dummyTies={dummyTies} />
       </section>
     </section>
   );
