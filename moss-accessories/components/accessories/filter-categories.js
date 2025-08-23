@@ -10,7 +10,7 @@ export default function FilterCategory({ name, options }) {
     <div className="mb-4 border-b pb-2 last:border-b-0 last:pb-0">
       <button
         onClick={toggleOpen}
-        className="outline flex justify-between items-center w-full text-left text-lg font-semibold hover:text-blue-600 focus:outline-none"
+        className=" flex justify-between items-center w-full text-left text-lg font-semibold hover:text-blue-600 focus:outline-none"
       >
         <span>{name} </span>
         {isOpen ? (

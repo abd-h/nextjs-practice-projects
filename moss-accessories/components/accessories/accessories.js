@@ -23,7 +23,7 @@ export default function AccessoriesPage({dummyTies}) {
           </ul>
         </nav>
         {/* Filter Sidebar */}
-        <FilterButton onClick={toggleSidebar}  />
+        <FilterButton onClick={toggleSidebar} isOpen={isSidebarOpen}  />
         <FilterSidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
       </div>
     );
