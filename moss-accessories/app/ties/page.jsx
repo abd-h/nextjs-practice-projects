@@ -1,5 +1,8 @@
+'use client'
+import { useContext } from "react";
 import Link from "next/link";
 import Accessories from "../../components/accessories/accessories";
+import {  useFilteredItemsContext, FilteredItemsProvider } from "@/moss-context/filtered-items-context";
 // This is a dummy data array for demonstration purposes
 
 const dummyTies = [
@@ -15,6 +18,10 @@ const dummyTies = [
 ];
 
 export default function TiesPage() {
+
+  const { isOpen, isExpandedItemId, toggleSidebar, handleFilterId } = useFilteredItemsContext();
+
+  
   return (
     <section className="flex flex-col px-4">
       <section className="flex flex-col px-4">

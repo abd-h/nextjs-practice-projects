@@ -7,21 +7,23 @@ import PopupOffer from "@/components/modal/popup_offer";
 import { getAccessories } from "@/lib/products";
 import Image from "next/image";
 import { MobileMenueProvider } from "@/moss-context/navbar-context";
+import { Filter } from "lucide-react";
+i
 
 export default async function Home() {
-  const products =  getAccessories();
+  // const products =  getAccessories();
   // console.log(products);
 
   
   
   
   return (
-    <MobileMenueProvider> 
-     
+    <FilteredPageProvider>
       <main className="max-w-[98%] m-auto">
         <ProductLandingPage />
       </main>
+
       <Footer />
-    </MobileMenueProvider>
+    </FilteredPageProvider>
   );
 }
