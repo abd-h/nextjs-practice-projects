@@ -21,7 +21,9 @@ export default function TiesPage() {
 
   const { isOpen, isExpandedItemId, toggleSidebar, handleFilterId } = useFilteredItemsContext();
 
-  
+
+  console.log("isOpen is active in filter buttons.:", isOpen); 
+
   return (
     <section className="flex flex-col px-4">
       <section className="flex flex-col px-4">

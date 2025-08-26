@@ -4,13 +4,13 @@ import { createContext, useContext, useState } from "react";
 export const FilteredItemsContext = createContext();
 
 export function FilteredItemsProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState([]);
 
   const [isExpandedItemId, setIsExpandedItemId] = useState(null);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   const handleFilterId = (filter) => {
@@ -24,7 +24,7 @@ export function FilteredItemsProvider({ children }) {
   };
 
   const filteredItemsContextValue = {
-    isOpen,
+    isSidebarOpen,
     toggleSidebar,
     handleFilterId,
     isExpandedItemId,

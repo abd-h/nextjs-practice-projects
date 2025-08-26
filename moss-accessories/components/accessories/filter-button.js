@@ -34,82 +34,155 @@ export default function FilterButton({ onClick, isOpen }) {
 console.log('Sidebar is open:', isOpen);
 
   return (
-    <section className="w-4/5 mx-auto relative">
-      <nav className="flex absolute left-1/2 transform -translate-x-1/2 w-screen my-2 py-2 bg-gradient-to-r justify-start border-y-2 border-gray-300 ">
-        <ul className="flex w-1/2 justify-start items-center gap-2">
-          {activeFilter.map((filter, i) => (
-            <li onClick={() => handleFilterId(filter.id)} key={filter.id}>
-              <div
-                className="  first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center"
-                onClick={onClick}
+    <div>
+      <section className="small_screens:hidden md_screens:hidden w-4/5 mx-auto relative">
+        <nav className="flex absolute left-1/2 transform -translate-x-1/2 w-screen my-2 py-2 bg-gradient-to-r justify-start border-y-2 border-gray-300 ">
+          <ul className="flex w-1/2 justify-start items-center gap-2">
+            {activeFilter.map((filter, i) => (
+              <li onClick={() => handleFilterId(filter.id)} key={filter.id}>
+                <div
+                  className="  first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center"
+                  onClick={onClick}
+                >
+                  {" "}
+                  {filter.title}
+                  {i === 0 ? (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8h18M3 16h18"
+                      />
+                      <circle
+                        cx="9"
+                        cy="8"
+                        r="1.5"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        fill="white"
+                      />
+                      <circle
+                        cx="15"
+                        cy="16"
+                        r="1.5"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        fill="white"
+                      />
+                    </svg>
+                  ) : isOpen && isExpandedItemId === filter.id ? (
+                    <Minus className="h-4 w-4 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
+                  ) : (
+                    <Plus className="h-4 w-4 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
+                  )}
+                </div>
+                <span>{} </span>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex w-1/3 justify-end gap-2 items-center">
+            <li>Items</li>
+            <li className="flex items-center gap-2">
+              Sorted by
+              <svg
+                className="w-8 h-8 font-extralight"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                {" "}
-                {filter.title}
-                {i === 0 ? (
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8h18M3 16h18"
-                    />
-                    <circle
-                      cx="9"
-                      cy="8"
-                      r="1.5"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      fill="white"
-                    />
-                    <circle
-                      cx="15"
-                      cy="16"
-                      r="1.5"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      fill="white"
-                    />
-                  </svg>
-                ) : isOpen && isExpandedItemId === filter.id ? (
-                  <Minus className="h-4 w-4 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
-                ) : (
-                  <Plus className="h-4 w-4 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
-                )}
-              </div>
-              <span>{} </span>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
             </li>
-          ))}
-        </ul>
-        <ul className="flex w-1/3 justify-end gap-2 items-center">
-          <li>Items</li>
-          <li className="flex items-center gap-2">
-            Sorted by
-            <svg
-              className="w-8 h-8 font-extralight"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1}
-                d="m6 9 6 6 6-6"
-              />
-            </svg>
-          </li>
-        </ul>
-      </nav>
-    </section>
+          </ul>
+        </nav>
+      </section>
+      <section className="larger_screens:hidden w-4/5 mx-auto relative">
+        <nav className="flex absolute left-1/2 transform -translate-x-1/2 w-screen my-2 py-2 bg-gradient-to-r justify-start border-y-2 border-gray-300 ">
+          <ul className="flex w-1/2 justify-start items-center gap-2">
+            {activeFilter.map((filter, i) => (
+              <li onClick={() => handleFilterId(filter.id)} key={filter.id}>
+                <div
+                  className={`${filter.title !== 'All filters'? 'hidden' : 'visible'}  first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center`}
+                  onClick={onClick}
+                >
+                  {" "}
+                  {filter.title}
+                  {i === 0 ? (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8h18M3 16h18"
+                      />
+                      <circle
+                        cx="9"
+                        cy="8"
+                        r="1.5"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        fill="white"
+                      />
+                      <circle
+                        cx="15"
+                        cy="16"
+                        r="1.5"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        fill="white"
+                      />
+                    </svg>
+                  ) : isOpen && isExpandedItemId === filter.id ? (
+                    <Minus className="h-4 w-4 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
+                  ) : (
+                    <Plus className="h-4 w-4 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
+                  )}
+                </div>
+                <span>{} </span>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex w-1/3 justify-end gap-2 items-center">
+            <li>Items</li>
+            <li className="flex items-center gap-2">
+              Sorted by
+              <svg
+                className="w-8 h-8 font-extralight"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="m6 9 6 6 6-6"
+                />
+              </svg>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
   );
 }
 
 
 
-            //   <Plus className="h-8 w-8 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
-            //   <Minus className="h-8 w-8 text-black cursor-pointer hover:scale-110 transition-transform duration-200" />
+          

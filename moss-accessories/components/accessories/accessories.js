@@ -4,12 +4,16 @@ import { useState } from 'react';
 import Link from 'next/link';
 import FilterButton from './filter-button';
 import FilterSidebar from './filter-sidebar';
+import { useFilteredItemsContext } from '@/moss-context/filtered-items-context';
 
 export default function AccessoriesPage({dummyTies}) {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen)
-    }
+  const { isSidebarOpen, setIsSidebarOpen, toggleSidebar } = useFilteredItemsContext();
+    // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    // const toggleSidebar = () => {
+        // setIsSidebarOpen(!isSidebarOpen)
+  // }
+  console.log('isSidebarOpen', isSidebarOpen);
+  
     return (
       <div className=" w-full relative min-h-screen ">
         {/* Main content of your accessories page */}

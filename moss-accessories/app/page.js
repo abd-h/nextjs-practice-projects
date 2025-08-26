@@ -8,7 +8,7 @@ import { getAccessories } from "@/lib/products";
 import Image from "next/image";
 import { MobileMenueProvider } from "@/moss-context/navbar-context";
 import { Filter } from "lucide-react";
-i
+
 
 export default async function Home() {
   // const products =  getAccessories();
