@@ -18,12 +18,12 @@ export default async function Home() {
   
   
   return (
-    <FilteredPageProvider>
+    <div>
       <main className="max-w-[98%] m-auto">
         <ProductLandingPage />
       </main>
 
       <Footer />
-    </FilteredPageProvider>
+    </div>
   );
 }

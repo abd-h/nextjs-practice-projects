@@ -13,7 +13,7 @@ import FooterEditorialCarousel from "./footer-editorial-carousel";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#28252a] text-white">
-      {/** Footer editorial carousel */ }
+      {/** Footer editorial carousel */}
       <FooterEditorialCarousel />
       <FooterNavLinks />
       {/** Social media links */}
@@ -27,13 +27,15 @@ export default function Footer() {
                 about our exclusive offers
               </label>
               <input
-                className="bg-[#28252a] border-b border-b-[white]"
+                className="pl-0 bg-[#28252a] border-b border-b-[white] bottom-0 focus:outline-none active border-t-0 border-x-0 focus:border-b focus:border-b-[white] text-xl focus:ring-0 placeholder:-ml-4 placeholder:text-xl placeholder:tracking-wider"
                 type="email"
                 name="email"
                 id="email"
+                placeholder="Email address"
+                required
               />
               <button
-                className="absolute bottom-6 right-0 font-bold"
+                className="absolute bottom-6 right-1 font-bold tracking-wider"
                 type="submit"
               >
                 Submit
@@ -88,7 +90,7 @@ export default function Footer() {
         <div className="h-full border-r border-r-[#777777] small_screens:border-b small_screens:border-b-[#777777]  small_screens:w-full small_screens:my-4"></div>
         <div className=" flex small_screens:w-full  justify-self-center border-l border-l-[#777777] w-1/2 h-[400px]">
           <div className=" flex flex-col w-1/2 items-center justify-start m-auto  small_screens:mx-auto small_screens:justify-center  small_screens:my-4">
-            <Link href="/" className=' self-start'>
+            <Link href="/" className=" self-start">
               <Image
                 className="max-h-[auto] w-[158px] h-[83px]"
                 src={prostateCancerLogo}

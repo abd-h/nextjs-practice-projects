@@ -34,17 +34,16 @@ export default function FilterButton({ onClick, isOpen }) {
 console.log('Sidebar is open:', isOpen);
 
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <section className="small_screens:hidden md_screens:hidden w-4/5 mx-auto relative">
         <nav className="flex absolute left-1/2 transform -translate-x-1/2 w-screen my-2 py-2 bg-gradient-to-r justify-start border-y-2 border-gray-300 ">
           <ul className="flex w-1/2 justify-start items-center gap-2">
             {activeFilter.map((filter, i) => (
               <li onClick={() => handleFilterId(filter.id)} key={filter.id}>
                 <div
-                  className="  first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center"
+                  className="first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center"
                   onClick={onClick}
                 >
-                  {" "}
                   {filter.title}
                   {i === 0 ? (
                     <svg
@@ -86,12 +85,14 @@ console.log('Sidebar is open:', isOpen);
               </li>
             ))}
           </ul>
-          <ul className="flex w-1/3 justify-end gap-2 items-center">
-            <li>Items</li>
+          <ul className="h-full self-center absolute right-12 flex w-1/3 justify-end gap-14 items-center">
+            <li className="border-x-2 w-1/3 border-gray-300 h-full  flex items-center justify-center">
+              <span className='p-2 font-bold'>{23}</span> Items
+            </li>
             <li className="flex items-center gap-2">
               Sorted by
               <svg
-                className="w-8 h-8 font-extralight"
+                className="w-7 h-7 font-extralight"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -113,10 +114,11 @@ console.log('Sidebar is open:', isOpen);
             {activeFilter.map((filter, i) => (
               <li onClick={() => handleFilterId(filter.id)} key={filter.id}>
                 <div
-                  className={`${filter.title !== 'All filters'? 'hidden' : 'visible'}  first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center`}
+                  className={`${
+                    filter.title !== "All filters" ? "hidden" : "visible"
+                  } first-of-type:ml-12 cursor-pointer flex gap-4 justify-center items-center p-2 text-center`}
                   onClick={onClick}
                 >
-                  {" "}
                   {filter.title}
                   {i === 0 ? (
                     <svg
@@ -158,9 +160,9 @@ console.log('Sidebar is open:', isOpen);
               </li>
             ))}
           </ul>
-          <ul className="flex w-1/3 justify-end gap-2 items-center">
-            <li>Items</li>
-            <li className="flex items-center gap-2">
+          <ul className="flex w-1/3 justify-end gap-12 items-center">
+            <li className="outline">Items</li>
+            <li className="outline flex items-center gap-2">
               Sorted by
               <svg
                 className="w-8 h-8 font-extralight"
